@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://guoliangxd.github.io">
   <title>datastructure04 | Kirby&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="数据结构-04链表链表的数据元素称为节点（node），由数据域和指针域组成，n个节点链结成一个链表。根据链表节点所含指针个数，指针方向和指针连接方式，可将链表分为单链表，循环链表，双向链表，二叉链表，十字链表，邻接表，邻接多重表。其中单链表，循环链表和双向链表用于实现线性表的链式存储结构，其他形式多用于实现树和图等非线性结构。为了处理方便，常在单链表的第一个节点之前附设一个节点，称之为头节点。作用">
+  <meta name="description" content="数据结构-04链表链表的数据元素称为节点（node），由数据域和指针域组成，n个节点链结成一个链表。根据链表节点所含指针个数，指针方向和指针连接方式，可将链表分为单链表，循环链表，双向链表，二叉链表，十字链表，邻接表，邻接多重表。其中单链表，循环链表和双向链表用于实现线性表的链式存储结构，其他形式多用于实现树和图等非线性结构。  单链表为了处理方便，常在单链表的第一个节点之前附设一个节点，称之为头">
 <meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="datastructure04">
 <meta property="og:url" content="http://guoliangxd.github.io/2018/11/01/datastructure04/index.html">
 <meta property="og:site_name" content="Kirby&#39;s Blog">
-<meta property="og:description" content="数据结构-04链表链表的数据元素称为节点（node），由数据域和指针域组成，n个节点链结成一个链表。根据链表节点所含指针个数，指针方向和指针连接方式，可将链表分为单链表，循环链表，双向链表，二叉链表，十字链表，邻接表，邻接多重表。其中单链表，循环链表和双向链表用于实现线性表的链式存储结构，其他形式多用于实现树和图等非线性结构。为了处理方便，常在单链表的第一个节点之前附设一个节点，称之为头节点。作用">
-<meta property="og:updated_time" content="2018-11-01T15:59:41.922Z">
+<meta property="og:description" content="数据结构-04链表链表的数据元素称为节点（node），由数据域和指针域组成，n个节点链结成一个链表。根据链表节点所含指针个数，指针方向和指针连接方式，可将链表分为单链表，循环链表，双向链表，二叉链表，十字链表，邻接表，邻接多重表。其中单链表，循环链表和双向链表用于实现线性表的链式存储结构，其他形式多用于实现树和图等非线性结构。  单链表为了处理方便，常在单链表的第一个节点之前附设一个节点，称之为头">
+<meta property="og:updated_time" content="2018-11-01T16:35:28.956Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="datastructure04">
-<meta name="twitter:description" content="数据结构-04链表链表的数据元素称为节点（node），由数据域和指针域组成，n个节点链结成一个链表。根据链表节点所含指针个数，指针方向和指针连接方式，可将链表分为单链表，循环链表，双向链表，二叉链表，十字链表，邻接表，邻接多重表。其中单链表，循环链表和双向链表用于实现线性表的链式存储结构，其他形式多用于实现树和图等非线性结构。为了处理方便，常在单链表的第一个节点之前附设一个节点，称之为头节点。作用">
+<meta name="twitter:description" content="数据结构-04链表链表的数据元素称为节点（node），由数据域和指针域组成，n个节点链结成一个链表。根据链表节点所含指针个数，指针方向和指针连接方式，可将链表分为单链表，循环链表，双向链表，二叉链表，十字链表，邻接表，邻接多重表。其中单链表，循环链表和双向链表用于实现线性表的链式存储结构，其他形式多用于实现树和图等非线性结构。  单链表为了处理方便，常在单链表的第一个节点之前附设一个节点，称之为头">
   
     <link rel="alternative" href="/atom.xml" title="Kirby&#39;s Blog" type="application/atom+xml">
   
@@ -209,7 +209,13 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="数据结构-04"><a href="#数据结构-04" class="headerlink" title="数据结构-04"></a>数据结构-04</h2><h3 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h3><p>链表的数据元素称为节点（node），由数据域和指针域组成，n个节点链结成一个链表。<br><br>根据链表节点所含指针个数，指针方向和指针连接方式，可将链表分为单链表，循环链表，双向链表，二叉链表，十字链表，邻接表，邻接多重表。其中单链表，循环链表和双向链表用于实现线性表的链式存储结构，其他形式多用于实现树和图等非线性结构。<br><br>为了处理方便，常在单链表的第一个节点之前附设一个节点，称之为头节点。作用有：<br><br>(1)便于首元节点（存储第一个数据元素的节点）的处理，使得首元节点也同其他节点一样有前驱，无需特殊处理。<br><br>(2)便于空表和非空表的统一处理。使得头指针不会为null。<br><br>单链表是非随机存储的存储结构，也成为顺序存储结构。</p>
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="数据结构-04"><a href="#数据结构-04" class="headerlink" title="数据结构-04"></a>数据结构-04</h2><h3 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h3><p>链表的数据元素称为节点（node），由数据域和指针域组成，n个节点链结成一个链表。<br><br>根据链表节点所含指针个数，指针方向和指针连接方式，可将链表分为单链表，循环链表，双向链表，二叉链表，十字链表，邻接表，邻接多重表。其中单链表，循环链表和双向链表用于实现线性表的链式存储结构，其他形式多用于实现树和图等非线性结构。<br></p>
+<hr>
+<p>单链表<br><br>为了处理方便，常在单链表的第一个节点之前附设一个节点，称之为头节点。作用有：<br><br>(1)便于首元节点（存储第一个数据元素的节点）的处理，使得首元节点也同其他节点一样有前驱，无需特殊处理。<br><br>(2)便于空表和非空表的统一处理。使得头指针不会为null。<br><br>单链表是非随机存储的存储结构，也成为顺序存储结构。<br><br>单链表的取值，插入，查找，删除，复杂度均为O(n),创建单链表分为头插法和尾插法（需尾指针），时间复杂度均为O(n)。</p>
+<hr>
+<p>循环链表<br><br>循环链表是最后一个节点的指针域指向头节点的链表。有时只有尾指针的循环链表在操作上更简便，比如合并两个线性表.<br></p>
+<hr>
+<p>双向链表<br><br>双向链表有两个指针域，一个指向直接前驱，另一个指向直接后继。双向链表的插入和删除与单链表有较大不同，需同时修改两个方向上的指针（插入改四个，删除改两个）。</p>
 
       
 
@@ -323,6 +329,15 @@ ga('send', 'pageview');
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/11/02/xiuxi/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          xiuxi
+        
+      </div>
+    </a>
   
   
     <a href="/2018/10/31/datastructure03/" id="article-nav-older" class="article-nav-link-wrap">
@@ -487,11 +502,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">

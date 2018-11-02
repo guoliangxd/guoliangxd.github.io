@@ -189,6 +189,79 @@ ga('send', 'pageview');
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-xiuxi" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/02/xiuxi/">xiuxi</a>
+    </h1>
+  
+
+        
+        <a href="/2018/11/02/xiuxi/" class="archive-article-date">
+  	<time datetime="2018-11-02T15:35:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="休息一天，明天全职加班，加油！"><a href="#休息一天，明天全职加班，加油！" class="headerlink" title="休息一天，明天全职加班，加油！"></a>休息一天，明天全职加班，加油！</h3>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/11/02/xiuxi/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-datastructure04" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -209,7 +282,13 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="数据结构-04"><a href="#数据结构-04" class="headerlink" title="数据结构-04"></a>数据结构-04</h2><h3 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h3><p>链表的数据元素称为节点（node），由数据域和指针域组成，n个节点链结成一个链表。<br><br>根据链表节点所含指针个数，指针方向和指针连接方式，可将链表分为单链表，循环链表，双向链表，二叉链表，十字链表，邻接表，邻接多重表。其中单链表，循环链表和双向链表用于实现线性表的链式存储结构，其他形式多用于实现树和图等非线性结构。<br><br>为了处理方便，常在单链表的第一个节点之前附设一个节点，称之为头节点。作用有：<br><br>(1)便于首元节点（存储第一个数据元素的节点）的处理，使得首元节点也同其他节点一样有前驱，无需特殊处理。<br><br>(2)便于空表和非空表的统一处理。使得头指针不会为null。<br><br>单链表是非随机存储的存储结构，也成为顺序存储结构。</p>
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="数据结构-04"><a href="#数据结构-04" class="headerlink" title="数据结构-04"></a>数据结构-04</h2><h3 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h3><p>链表的数据元素称为节点（node），由数据域和指针域组成，n个节点链结成一个链表。<br><br>根据链表节点所含指针个数，指针方向和指针连接方式，可将链表分为单链表，循环链表，双向链表，二叉链表，十字链表，邻接表，邻接多重表。其中单链表，循环链表和双向链表用于实现线性表的链式存储结构，其他形式多用于实现树和图等非线性结构。<br></p>
+<hr>
+<p>单链表<br><br>为了处理方便，常在单链表的第一个节点之前附设一个节点，称之为头节点。作用有：<br><br>(1)便于首元节点（存储第一个数据元素的节点）的处理，使得首元节点也同其他节点一样有前驱，无需特殊处理。<br><br>(2)便于空表和非空表的统一处理。使得头指针不会为null。<br><br>单链表是非随机存储的存储结构，也成为顺序存储结构。<br><br>单链表的取值，插入，查找，删除，复杂度均为O(n),创建单链表分为头插法和尾插法（需尾指针），时间复杂度均为O(n)。</p>
+<hr>
+<p>循环链表<br><br>循环链表是最后一个节点的指针域指向头节点的链表。有时只有尾指针的循环链表在操作上更简便，比如合并两个线性表.<br></p>
+<hr>
+<p>双向链表<br><br>双向链表有两个指针域，一个指向直接前驱，另一个指向直接后继。双向链表的插入和删除与单链表有较大不同，需同时修改两个方向上的指针（插入改四个，删除改两个）。</p>
 
       
 
@@ -856,82 +935,6 @@ ga('send', 'pageview');
 
 
   
-    <article id="post-javabeginer" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/23/javabeginer/">javabeginer</a>
-    </h1>
-  
-
-        
-        <a href="/2018/10/23/javabeginer/" class="archive-article-date">
-  	<time datetime="2018-10-23T07:44:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="再拾Android"><a href="#再拾Android" class="headerlink" title="再拾Android"></a>再拾Android</h1><p>七月集训时得知自己的工作岗位是DMR协议栈软件，主要用C和C++，和自己之前搞得Android几乎没有任何关联，甚至都不在同一层上。入职后，导师看了我的简历，根据当前PS的开发进入尾声，主要在搞维护的现状，又想起隔壁小组有个托了N长时间的Android项目，本着人尽其用的原则，就把我这个Android菜鸟推荐给隔壁小组写Android去了。上上周开了第一次会，把分工基本明确了，我这里主要是负责UI部分。本以为UI搞起来应该很简单，实际搞起来则不然。下面首先搭环境时Eclipse就给了我个下马威。以前一直用Android Studio各种自动化，要操心的几乎就只有编码（当然，还有天朝特色的翻墙）。因为公司研发不能连外网，所以就只能用Eclipse了，Eclipse的Android支持套件大概在四年前就停止更新了。谷歌之后的各种支持库的开发也完全没考虑到Eclipse。上周几乎所有时间都是在熟悉这个环境。踩了很多坑，最大的就是支持库的导入了，开始时以为只把jar文件导进去就ok，但实际操作后资源文件各种报错。去谷歌官网看了原来是部分库是带资源的，导入时要以项目的形式导入，再去添加依赖。而且有些库还要依赖其他库，经常为了用一个库里的某个组件，连续导入好几个库。除此之外还有版本的问题，好多库只能在较高的API下工作，导入后如果报错了，就要把库的属性文件和Androidmanifest.xml文件里的targetSdk，miniSdk的版本调高才能正常工作。</p>
-<hr>
-<p>环境上的坑大概就这些，讲真Eclipse这个环境的编译还是挺快的，比那个疯狂联网的gradle明显快了很多，这点必须要肯定，多适应适应起实还算挺好用的。<br><br>真正到了开发上遇到的问题就更多更复杂了。<br><br>由于屏幕上要显示一个既能纵向又能横向滑动的列表，我就先从网上找了个库，而且还是AndroidStudio的项目，千辛万苦让它在Eclipse上跑起来以后，用了半天的时间修改，就基本符合要求了。但接下来的问题就很尴尬了。<br><br>1.如何给首行添加触摸监听，原作者根本就没考虑这个问题，也就没有提供相应接口，要改的话可能要直接修改库，里面各种对View的操作，菜鸟表示一脸懵逼；<br><br>2.如何隐藏部分列，这个也是要从库里面改，很伤脑筋.<br><br>最麻烦的问题就是这些，我再研究下库的源码，结合网上的经验，尽量周五前搞定。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/10/23/javabeginer/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1033,11 +1036,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
