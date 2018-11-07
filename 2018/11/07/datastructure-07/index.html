@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://guoliangxd.github.io">
-  <title>文章分类 | Kirby&#39;s Blog</title>
+  <title>datastructure-07 | Kirby&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="文章分类">
-<meta property="og:url" content="http://guoliangxd.github.io/categories/index.html">
+  <meta name="description" content="数据结构-07栈的表示和实现顺序栈：有栈底指针和栈顶指针，当二者相等时为空栈，非空时，栈顶指针始终指向栈顶元素的上一个位置。链栈：由于栈的主要操作是在栈顶插入和删除，显然以链表的头部作为栈顶是最方便的，而且没必要像单链表那样为了操作方便附加一个头节点。  栈与递归递归的定义：若在一个函数、过程或者数据结构定义的内部又直接或间接出现定义本身的应用，则称他们是递归的，或者是递归定义的。在以下三种情况，">
+<meta name="keywords" content="数据结构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="datastructure-07">
+<meta property="og:url" content="http://guoliangxd.github.io/2018/11/07/datastructure-07/index.html">
 <meta property="og:site_name" content="Kirby&#39;s Blog">
-<meta property="og:updated_time" content="2018-03-13T12:43:04.913Z">
+<meta property="og:description" content="数据结构-07栈的表示和实现顺序栈：有栈底指针和栈顶指针，当二者相等时为空栈，非空时，栈顶指针始终指向栈顶元素的上一个位置。链栈：由于栈的主要操作是在栈顶插入和删除，显然以链表的头部作为栈顶是最方便的，而且没必要像单链表那样为了操作方便附加一个头节点。  栈与递归递归的定义：若在一个函数、过程或者数据结构定义的内部又直接或间接出现定义本身的应用，则称他们是递归的，或者是递归定义的。在以下三种情况，">
+<meta property="og:updated_time" content="2018-11-07T16:00:25.064Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="文章分类">
+<meta name="twitter:title" content="datastructure-07">
+<meta name="twitter:description" content="数据结构-07栈的表示和实现顺序栈：有栈底指针和栈顶指针，当二者相等时为空栈，非空时，栈顶指针始终指向栈顶元素的上一个位置。链栈：由于栈的主要操作是在栈顶插入和删除，显然以链表的头部作为栈顶是最方便的，而且没必要像单链表那样为了操作方便附加一个头节点。  栈与递归递归的定义：若在一个函数、过程或者数据结构定义的内部又直接或间接出现定义本身的应用，则称他们是递归的，或者是递归定义的。在以下三种情况，">
   
     <link rel="alternative" href="/atom.xml" title="Kirby&#39;s Blog" type="application/atom+xml">
   
@@ -185,27 +189,30 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-datastructure-07" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      文章分类
+      datastructure-07
     </h1>
   
 
         
-        <a href="/categories/index.html" class="archive-article-date">
-  	<time datetime="2018-03-13T12:41:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-13</time>
+        <a href="/2018/11/07/datastructure-07/" class="archive-article-date">
+  	<time datetime="2018-11-07T14:28:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="数据结构-07"><a href="#数据结构-07" class="headerlink" title="数据结构-07"></a>数据结构-07</h2><h3 id="栈的表示和实现"><a href="#栈的表示和实现" class="headerlink" title="栈的表示和实现"></a>栈的表示和实现</h3><p>顺序栈：有栈底指针和栈顶指针，当二者相等时为空栈，非空时，栈顶指针始终指向栈顶元素的上一个位置。<br><br>链栈：由于栈的主要操作是在栈顶插入和删除，显然以链表的头部作为栈顶是最方便的，而且没必要像单链表那样为了操作方便附加一个头节点。<br></p>
+<hr>
+<h3 id="栈与递归"><a href="#栈与递归" class="headerlink" title="栈与递归"></a>栈与递归</h3><p>递归的定义：若在一个函数、过程或者数据结构定义的内部又直接或间接出现定义本身的应用，则称他们是递归的，或者是递归定义的。在以下三种情况，常常使用递归的方法：<br><br>1.定义是递归的，如阶乘函数，二阶Fibonacci数列。<br><br>这种将复杂问题分解成几个相对简单且解法相同或类似的子问题来求解的方法称为递归求解，这种分解-求解的策略叫做“分治法”。<br><br>采用分治法进行递归求解的问题需满足以下三个条件：<br><br>(1)能将一个问题转变成一个新问题，而新问题与原问题的解法相同或类同，不同仅是处理的对象，并且这些处理对象更小且变化有规律。<br><br>(2)可以通过上述转化而使问题简化。<br><br>(3)必须有一个明确的递归出口，或称递归的边界。<br>一般形式：<br>void p(args)<br>{<br>    if(递归结束条件成立)可直接求解;     //递归终止的条件<br>    else p(较小的参数);<br>}<br>2.数据结构是递归的，如链表<br>3.问题的解法是递归的，问题本身没有明显的递归结构，但用递归求解比迭代求解更简单，如hanoi塔问题，八皇后问题，迷宫问题等。</p>
+
       
 
       
@@ -244,6 +251,17 @@ ga('send', 'pageview');
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -294,7 +312,7 @@ ga('send', 'pageview');
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://guoliangxd.github.io/categories/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://guoliangxd.github.io/2018/11/07/datastructure-07/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -306,6 +324,16 @@ ga('send', 'pageview');
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2018/11/07/datastruct-06/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">datastruct-06</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -319,6 +347,19 @@ ga('send', 'pageview');
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#数据结构-07"><span class="toc-number">1.</span> <span class="toc-text">数据结构-07</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#栈的表示和实现"><span class="toc-number">1.1.</span> <span class="toc-text">栈的表示和实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#栈与递归"><span class="toc-number">1.2.</span> <span class="toc-text">栈与递归</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -340,7 +381,7 @@ ga('send', 'pageview');
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "Tue Mar 13 2018 20:41:30 GMT+0800",
+  id: "Wed Nov 07 2018 22:28:37 GMT+0800",
   owner: 'guoliangxd',
   repo: 'guoliangxd.github.io',
   oauth: {
@@ -374,7 +415,7 @@ gitment.render('gitment-ctn')
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
