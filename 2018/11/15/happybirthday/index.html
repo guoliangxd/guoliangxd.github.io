@@ -6,19 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://guoliangxd.github.io">
-  <title>datastructure-10 | Kirby&#39;s Blog</title>
+  <title>happybirthday | Kirby&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="数据结构-10最简单的模式匹配算法-BF算法(Brute-Force)算法步骤1.分别利用计数指针i和j指向主串S和模式T中当前正待比较的字符位置，i初值为pos，j初值为1.2.如果两个串均为比较到队尾，即i和j均分别小于等于S和T的长度时，则循环执行以下操作：    S.ch[i]和T.ch[j]比较，若相等，则i和j分别指示串中下个位置，继续比骄傲后续字符。    若不等，指针后退重新开始匹">
-<meta name="keywords" content="数据结构">
+  <meta name="description" content="生日快乐，25岁的你也要加油哦！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="datastructure-10">
-<meta property="og:url" content="http://guoliangxd.github.io/2018/11/14/datastructure-10/index.html">
+<meta property="og:title" content="happybirthday">
+<meta property="og:url" content="http://guoliangxd.github.io/2018/11/15/happybirthday/index.html">
 <meta property="og:site_name" content="Kirby&#39;s Blog">
-<meta property="og:description" content="数据结构-10最简单的模式匹配算法-BF算法(Brute-Force)算法步骤1.分别利用计数指针i和j指向主串S和模式T中当前正待比较的字符位置，i初值为pos，j初值为1.2.如果两个串均为比较到队尾，即i和j均分别小于等于S和T的长度时，则循环执行以下操作：    S.ch[i]和T.ch[j]比较，若相等，则i和j分别指示串中下个位置，继续比骄傲后续字符。    若不等，指针后退重新开始匹">
-<meta property="og:updated_time" content="2018-11-14T16:02:20.302Z">
+<meta property="og:description" content="生日快乐，25岁的你也要加油哦！">
+<meta property="og:updated_time" content="2018-11-15T15:15:22.454Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="datastructure-10">
-<meta name="twitter:description" content="数据结构-10最简单的模式匹配算法-BF算法(Brute-Force)算法步骤1.分别利用计数指针i和j指向主串S和模式T中当前正待比较的字符位置，i初值为pos，j初值为1.2.如果两个串均为比较到队尾，即i和j均分别小于等于S和T的长度时，则循环执行以下操作：    S.ch[i]和T.ch[j]比较，若相等，则i和j分别指示串中下个位置，继续比骄傲后续字符。    若不等，指针后退重新开始匹">
+<meta name="twitter:title" content="happybirthday">
+<meta name="twitter:description" content="生日快乐，25岁的你也要加油哦！">
   
     <link rel="alternative" href="/atom.xml" title="Kirby&#39;s Blog" type="application/atom+xml">
   
@@ -189,28 +188,27 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-datastructure-10" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-happybirthday" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      datastructure-10
+      happybirthday
     </h1>
   
 
         
-        <a href="/2018/11/14/datastructure-10/" class="archive-article-date">
-  	<time datetime="2018-11-14T15:42:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-14</time>
+        <a href="/2018/11/15/happybirthday/" class="archive-article-date">
+  	<time datetime="2018-11-15T15:13:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-15</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="数据结构-10"><a href="#数据结构-10" class="headerlink" title="数据结构-10"></a>数据结构-10</h2><h3 id="最简单的模式匹配算法-BF算法-Brute-Force"><a href="#最简单的模式匹配算法-BF算法-Brute-Force" class="headerlink" title="最简单的模式匹配算法-BF算法(Brute-Force)"></a>最简单的模式匹配算法-BF算法(Brute-Force)</h3><p>算法步骤<br><br>1.分别利用计数指针i和j指向主串S和模式T中当前正待比较的字符位置，i初值为pos，j初值为1.<br><br>2.如果两个串均为比较到队尾，即i和j均分别小于等于S和T的长度时，则循环执行以下操作：<br><br>    S.ch[i]和T.ch[j]比较，若相等，则i和j分别指示串中下个位置，继续比骄傲后续字符。<br><br>    若不等，指针后退重新开始匹配，从主串的下一个字符(i=i-j+2)起再重新和模式的第一个字符比较。<br><br>3.如果j&gt;T.length，说明模式T中的每个字符依次和主串S中的一个连续的字符序列相等，则匹配成功，返回和模式T中第一个字符相等的字符在主串中的位置(i-T.length);否则匹配失败。<br><br>最好的时间复杂度为O(n+m),最差为O(n*m).</p>
-
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="生日快乐，25岁的你也要加油哦！"><a href="#生日快乐，25岁的你也要加油哦！" class="headerlink" title="生日快乐，25岁的你也要加油哦！"></a>生日快乐，25岁的你也要加油哦！</h2>
       
 
       
@@ -249,17 +247,6 @@ ga('send', 'pageview');
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -310,7 +297,7 @@ ga('send', 'pageview');
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://guoliangxd.github.io/2018/11/14/datastructure-10/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://guoliangxd.github.io/2018/11/15/happybirthday/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -324,18 +311,18 @@ ga('send', 'pageview');
   
 <nav id="article-nav">
   
-    <a href="/2018/11/15/happybirthday/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/11/19/datastructure-11/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          happybirthday
+          datastructure-11
         
       </div>
     </a>
   
   
-    <a href="/2018/11/13/wanbiao/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">wanbiao</div>
+    <a href="/2018/11/14/datastructure-10/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">datastructure-10</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -354,19 +341,6 @@ ga('send', 'pageview');
             </div>
         </div>
         
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#数据结构-10"><span class="toc-number">1.</span> <span class="toc-text">数据结构-10</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#最简单的模式匹配算法-BF算法-Brute-Force"><span class="toc-number">1.1.</span> <span class="toc-text">最简单的模式匹配算法-BF算法(Brute-Force)</span></a></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
         
     </div>
 </aside>
@@ -388,7 +362,7 @@ ga('send', 'pageview');
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "Wed Nov 14 2018 23:42:10 GMT+0800",
+  id: "Thu Nov 15 2018 23:13:55 GMT+0800",
   owner: 'guoliangxd',
   repo: 'guoliangxd.github.io',
   oauth: {
