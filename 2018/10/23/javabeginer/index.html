@@ -209,7 +209,7 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="再拾Android"><a href="#再拾Android" class="headerlink" title="再拾Android"></a>再拾Android</h1><p>七月集训时得知自己的工作岗位是DMR协议栈软件，主要用C和C++，和自己之前搞得Android几乎没有任何关联，甚至都不在同一层上。入职后，导师看了我的简历，根据当前PS的开发进入尾声，主要在搞维护的现状，又想起隔壁小组有个托了N长时间的Android项目，本着人尽其用的原则，就把我这个Android菜鸟推荐给隔壁小组写Android去了。上上周开了第一次会，把分工基本明确了，我这里主要是负责UI部分。本以为UI搞起来应该很简单，实际搞起来则不然。下面首先搭环境时Eclipse就给了我个下马威。以前一直用Android Studio各种自动化，要操心的几乎就只有编码（当然，还有天朝特色的翻墙）。因为公司研发不能连外网，所以就只能用Eclipse了，Eclipse的Android支持套件大概在四年前就停止更新了。谷歌之后的各种支持库的开发也完全没考虑到Eclipse。上周几乎所有时间都是在熟悉这个环境。踩了很多坑，最大的就是支持库的导入了，开始时以为只把jar文件导进去就ok，但实际操作后资源文件各种报错。去谷歌官网看了原来是部分库是带资源的，导入时要以项目的形式导入，再去添加依赖。而且有些库还要依赖其他库，经常为了用一个库里的某个组件，连续导入好几个库。除此之外还有版本的问题，好多库只能在较高的API下工作，导入后如果报错了，就要把库的属性文件和Androidmanifest.xml文件里的targetSdk，miniSdk的版本调高才能正常工作。</p>
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="再拾Android"><a href="#再拾Android" class="headerlink" title="再拾Android"></a>再拾Android</h1><p>七月集训时得知自己的工作岗位是DMR协议栈软件，主要用C和C++，和自己之前搞得Android几乎没有任何关联，甚至都不在同一层上。入职后，导师看了我的简历，根据当前PS的开发进入尾声，主要在搞维护的现状，又想起隔壁小组有个托了N长时间的Android项目，本着人尽其用的原则，就把我这个Android菜鸟推荐给隔壁小组写Android去了。上上周开了第一次会，把分工基本明确了，我这里主要是负责UI部分。本以为UI搞起来应该很简单，实际搞起来则不然。下面首先搭环境时Eclipse就给了我个下马威。以前一直用Android Studio各种自动化，要操心的几乎就只有编码（当然，还有天朝特色的翻墙）。因为公司研发不能连外网，所以就只能用Eclipse了，Eclipse的Android支持套件大概在四年前就停止更新了。谷歌之后的各种支持库的开发也完全没考虑到Eclipse。上周几乎所有时间都是在熟悉这个环境。踩了很多坑，最大的就是支持库的导入了，开始时以为只把jar文件导进去就ok，但实际操作后资源文件各种报错。去谷歌官网看了原来是部分库是带资源的，导入时要以项目的形式导入，再去添加依赖。而且有些库还要依赖其他库，经常为了用一个库里的某个组件，连续导入好几个库。除此之外还有版本的问题，好多库只能在较高的API下工作，导入后如果报错了，就要把库的属性文件和Androidmanifest.xml文件里的targetSdk，miniSdk的版本调高才能正常工作。</p>
 <hr>
 <p>环境上的坑大概就这些，讲真Eclipse这个环境的编译还是挺快的，比那个疯狂联网的gradle明显快了很多，这点必须要肯定，多适应适应起实还算挺好用的。<br><br>真正到了开发上遇到的问题就更多更复杂了。<br><br>由于屏幕上要显示一个既能纵向又能横向滑动的列表，我就先从网上找了个库，而且还是AndroidStudio的项目，千辛万苦让它在Eclipse上跑起来以后，用了半天的时间修改，就基本符合要求了。但接下来的问题就很尴尬了。<br><br>1.如何给首行添加触摸监听，原作者根本就没考虑这个问题，也就没有提供相应接口，要改的话可能要直接修改库，里面各种对View的操作，菜鸟表示一脸懵逼；<br><br>2.如何隐藏部分列，这个也是要从库里面改，很伤脑筋.<br><br>最麻烦的问题就是这些，我再研究下库的源码，结合网上的经验，尽量周五前搞定。</p>
 
@@ -494,11 +494,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
