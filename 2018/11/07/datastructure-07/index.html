@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://guoliangxd.github.io/2018/11/07/datastructure-07/index.html">
 <meta property="og:site_name" content="Kirby&#39;s Blog">
 <meta property="og:description" content="数据结构-07栈的表示和实现顺序栈：有栈底指针和栈顶指针，当二者相等时为空栈，非空时，栈顶指针始终指向栈顶元素的上一个位置。链栈：由于栈的主要操作是在栈顶插入和删除，显然以链表的头部作为栈顶是最方便的，而且没必要像单链表那样为了操作方便附加一个头节点。  栈与递归递归的定义：若在一个函数、过程或者数据结构定义的内部又直接或间接出现定义本身的应用，则称他们是递归的，或者是递归定义的。在以下三种情况，">
-<meta property="og:updated_time" content="2018-11-07T16:00:25.064Z">
+<meta property="og:updated_time" content="2018-11-07T16:00:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="datastructure-07">
 <meta name="twitter:description" content="数据结构-07栈的表示和实现顺序栈：有栈底指针和栈顶指针，当二者相等时为空栈，非空时，栈顶指针始终指向栈顶元素的上一个位置。链栈：由于栈的主要操作是在栈顶插入和删除，显然以链表的头部作为栈顶是最方便的，而且没必要像单链表那样为了操作方便附加一个头节点。  栈与递归递归的定义：若在一个函数、过程或者数据结构定义的内部又直接或间接出现定义本身的应用，则称他们是递归的，或者是递归定义的。在以下三种情况，">
@@ -209,7 +209,7 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="数据结构-07"><a href="#数据结构-07" class="headerlink" title="数据结构-07"></a>数据结构-07</h2><h3 id="栈的表示和实现"><a href="#栈的表示和实现" class="headerlink" title="栈的表示和实现"></a>栈的表示和实现</h3><p>顺序栈：有栈底指针和栈顶指针，当二者相等时为空栈，非空时，栈顶指针始终指向栈顶元素的上一个位置。<br><br>链栈：由于栈的主要操作是在栈顶插入和删除，显然以链表的头部作为栈顶是最方便的，而且没必要像单链表那样为了操作方便附加一个头节点。<br></p>
+        <h2 id="数据结构-07"><a href="#数据结构-07" class="headerlink" title="数据结构-07"></a>数据结构-07</h2><h3 id="栈的表示和实现"><a href="#栈的表示和实现" class="headerlink" title="栈的表示和实现"></a>栈的表示和实现</h3><p>顺序栈：有栈底指针和栈顶指针，当二者相等时为空栈，非空时，栈顶指针始终指向栈顶元素的上一个位置。<br><br>链栈：由于栈的主要操作是在栈顶插入和删除，显然以链表的头部作为栈顶是最方便的，而且没必要像单链表那样为了操作方便附加一个头节点。<br></p>
 <hr>
 <h3 id="栈与递归"><a href="#栈与递归" class="headerlink" title="栈与递归"></a>栈与递归</h3><p>递归的定义：若在一个函数、过程或者数据结构定义的内部又直接或间接出现定义本身的应用，则称他们是递归的，或者是递归定义的。在以下三种情况，常常使用递归的方法：<br><br>1.定义是递归的，如阶乘函数，二阶Fibonacci数列。<br><br>这种将复杂问题分解成几个相对简单且解法相同或类似的子问题来求解的方法称为递归求解，这种分解-求解的策略叫做“分治法”。<br><br>采用分治法进行递归求解的问题需满足以下三个条件：<br><br>(1)能将一个问题转变成一个新问题，而新问题与原问题的解法相同或类同，不同仅是处理的对象，并且这些处理对象更小且变化有规律。<br><br>(2)可以通过上述转化而使问题简化。<br><br>(3)必须有一个明确的递归出口，或称递归的边界。<br>一般形式：<br>void p(args)<br>{<br>    if(递归结束条件成立)可直接求解;     //递归终止的条件<br>    else p(较小的参数);<br>}<br>2.数据结构是递归的，如链表<br>3.问题的解法是递归的，问题本身没有明显的递归结构，但用递归求解比迭代求解更简单，如hanoi塔问题，八皇后问题，迷宫问题等。</p>
 
@@ -411,7 +411,7 @@ gitment.render('gitment-ctn')
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 郭亮
+    		&copy; 2019 郭亮
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -494,19 +494,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">

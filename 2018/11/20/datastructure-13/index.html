@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://guoliangxd.github.io/2018/11/20/datastructure-13/index.html">
 <meta property="og:site_name" content="Kirby&#39;s Blog">
 <meta property="og:description" content="数据结构-13树树是n个有限节点的集合，对于非空树：有且只有一个根节点；除根节点以外的其余节点可分为m个互不相交的有限集，其中每个集合本身又是一棵树，称为根的子树。树的表示形式十分丰富，有树形图，嵌套集合，广义表，凹入法等。树的基本术语：节点：树中的一个独立单元，包含一个数据元素及若干指向其子树的分支。节点的度：节点拥有的子树数称为节点的度。树的度：树内各节点度的最大值。叶子：度为0的节点称为叶子">
-<meta property="og:updated_time" content="2018-11-20T15:24:46.944Z">
+<meta property="og:updated_time" content="2018-11-20T15:24:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="datastructure-13">
 <meta name="twitter:description" content="数据结构-13树树是n个有限节点的集合，对于非空树：有且只有一个根节点；除根节点以外的其余节点可分为m个互不相交的有限集，其中每个集合本身又是一棵树，称为根的子树。树的表示形式十分丰富，有树形图，嵌套集合，广义表，凹入法等。树的基本术语：节点：树中的一个独立单元，包含一个数据元素及若干指向其子树的分支。节点的度：节点拥有的子树数称为节点的度。树的度：树内各节点度的最大值。叶子：度为0的节点称为叶子">
@@ -209,7 +209,7 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="数据结构-13"><a href="#数据结构-13" class="headerlink" title="数据结构-13"></a>数据结构-13</h2><h3 id="树"><a href="#树" class="headerlink" title="树"></a>树</h3><p>树是n个有限节点的集合，对于非空树：有且只有一个根节点；除根节点以外的其余节点可分为m个互不相交的有限集，其中每个集合本身又是一棵树，称为根的子树。<br><br>树的表示形式十分丰富，有树形图，嵌套集合，广义表，凹入法等。<br><br>树的基本术语：<br><br>节点：树中的一个独立单元，包含一个数据元素及若干指向其子树的分支。<br><br>节点的度：节点拥有的子树数称为节点的度。<br><br>树的度：树内各节点度的最大值。<br><br>叶子：度为0的节点称为叶子或终端节点。<br><br>非终端节点：度不为0的节点。<br><br>双亲和孩子：节点的子树的根称为该节点的孩子，相应地，该节点称为孩子的双亲。<br><br>兄弟：同一个双亲的孩子之间互称为兄弟。<br><br>祖先：从根到该该节点所经分支上的所有节点。<br><br>子孙：以某节点为根的子树中的任意节点都成为该节点的子孙。<br><br>层次：节点的层次从根节点算起，根为第一层。<br><br>堂兄弟：双亲在同一层的节点互为堂兄弟。<br><br>树的深度：树中节点的最大层次称为树的高度或深度。<br><br>有序树和无序树：树中节点的各子树从左到右是有次序的为有序树，否则为无序树。<br><br>森林：m棵互不相交的树的集合。</p>
+        <h2 id="数据结构-13"><a href="#数据结构-13" class="headerlink" title="数据结构-13"></a>数据结构-13</h2><h3 id="树"><a href="#树" class="headerlink" title="树"></a>树</h3><p>树是n个有限节点的集合，对于非空树：有且只有一个根节点；除根节点以外的其余节点可分为m个互不相交的有限集，其中每个集合本身又是一棵树，称为根的子树。<br><br>树的表示形式十分丰富，有树形图，嵌套集合，广义表，凹入法等。<br><br>树的基本术语：<br><br>节点：树中的一个独立单元，包含一个数据元素及若干指向其子树的分支。<br><br>节点的度：节点拥有的子树数称为节点的度。<br><br>树的度：树内各节点度的最大值。<br><br>叶子：度为0的节点称为叶子或终端节点。<br><br>非终端节点：度不为0的节点。<br><br>双亲和孩子：节点的子树的根称为该节点的孩子，相应地，该节点称为孩子的双亲。<br><br>兄弟：同一个双亲的孩子之间互称为兄弟。<br><br>祖先：从根到该该节点所经分支上的所有节点。<br><br>子孙：以某节点为根的子树中的任意节点都成为该节点的子孙。<br><br>层次：节点的层次从根节点算起，根为第一层。<br><br>堂兄弟：双亲在同一层的节点互为堂兄弟。<br><br>树的深度：树中节点的最大层次称为树的高度或深度。<br><br>有序树和无序树：树中节点的各子树从左到右是有次序的为有序树，否则为无序树。<br><br>森林：m棵互不相交的树的集合。</p>
 <hr>
 <p>二叉树<br><br>二叉树每个节点至多只有两棵子树，且子树有左右之分，其次序不能任意颠倒。</p>
 
@@ -411,7 +411,7 @@ gitment.render('gitment-ctn')
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 郭亮
+    		&copy; 2019 郭亮
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -494,19 +494,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
