@@ -189,6 +189,194 @@ ga('send', 'pageview');
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-MarkDown" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/13/MarkDown/">MarkDown初步</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/13/MarkDown/" class="archive-article-date">
+  	<time datetime="2019-05-12T16:07:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>What is MarkDown?<br>Easy Read,Easy Write!<br>Markdown 是一个 Web 上使用的文本到HTML的转换工具，可以通过简单、易读易写的文本格式生成结构化的HTML文档。目前国内外主流编程网站均支持这种格式。</p>
+<h2 id="兼容HTML"><a href="#兼容HTML" class="headerlink" title="兼容HTML"></a>兼容HTML</h2><p>语法目标：成为一种适用于网络的书写语言</p>
+<p>HTML区块标签：前后必须有空行，且开始和结束标签不能用Tab或空格缩进，区块内的Markdown语法不会被处理；<br>HTML区段标签：可以在Markdown内随意使用，且区段内Markdown语法有效。</p>
+<p>版权符号：&copy;<br>AT&amp;T</p>
+<p>code范围内，不论行内还是区块，&lt;,和&amp;两个符号都应会被转换成HTML实体。</p>
+<h1 id="区块元素"><a href="#区块元素" class="headerlink" title="区块元素"></a>区块元素</h1><h2 id="段落与换行"><a href="#段落与换行" class="headerlink" title="段落与换行"></a>段落与换行</h2><p>一个Markdown段落是由一个或多个连续的文本行组成,他的前后要有一个以上的空行（看起来像空的，即为空行,也可以通过br标签实现分段，或者两个空格+回车），普通段落不能用空格或制表符来缩进。</p>
+<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>Markdown支持两种标题语法，类Setext和类atx形式。<br>类Setext使用=（最高阶标题），-（第二阶标题）  </p>
+<h1 id="This-is-an-H1"><a href="#This-is-an-H1" class="headerlink" title="This is an H1"></a>This is an H1</h1><h2 id="This-is-an-H2"><a href="#This-is-an-H2" class="headerlink" title="This is an H2"></a>This is an H2</h2><p>类Atx形式则是在行首插入1到6个#，对应标题1到6阶</p>
+<h1 id="这是H1"><a href="#这是H1" class="headerlink" title="这是H1"></a>这是H1</h1><h2 id="这是H2"><a href="#这是H2" class="headerlink" title="这是H2"></a>这是H2</h2><h3 id="这是H3"><a href="#这是H3" class="headerlink" title="这是H3"></a>这是H3</h3><h4 id="这是H4"><a href="#这是H4" class="headerlink" title="这是H4"></a>这是H4</h4><h5 id="这是H5"><a href="#这是H5" class="headerlink" title="这是H5"></a>这是H5</h5><h6 id="这是H6"><a href="#这是H6" class="headerlink" title="这是H6"></a>这是H6</h6><p>注意：#与标题之间要有空格  </p>
+<h2 id="区块引用"><a href="#区块引用" class="headerlink" title="区块引用"></a>区块引用</h2><p>在每一行前加’&gt;’</p>
+<blockquote>
+<p>This is a blockquote with two pargraphs. Lorem ipsum dolor sit amet,<br>consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.</p>
+<p>Donec sit amet nisl. Aliquam semper ipsum dolor sit amet.  </p>
+</blockquote>
+<p>也可以只在段落的第一行加。  </p>
+<blockquote>
+<p>This is a blockquote with two pargraphs. Lorem ipsum dolor sit amet,consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.  </p>
+<p>Donec sit amet nisl. Aliquam semper  </p>
+</blockquote>
+<p>引用的区块内也可以使用其他的Markdown语法，包括列表、标题、代码块等。  </p>
+<blockquote>
+<h2 id="这是一个标题"><a href="#这是一个标题" class="headerlink" title="这是一个标题"></a>这是一个标题</h2><ol>
+<li>这是第一行列表  </li>
+<li>这是第二行列表  </li>
+</ol>
+<p>给出一些例子代码：<br>  return shell_exec(“echo $input | $markdown_script”);  </p>
+</blockquote>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>Markdown支持有序列表和无序列表。<br>无序列表使用*，+，-作为列表标记  </p>
+<blockquote>
+<ul>
+<li>Red  </li>
+<li>Green  </li>
+<li>Blue  </li>
+</ul>
+</blockquote>
+<p>等同于  </p>
+<blockquote>
+<ul>
+<li>Red</li>
+<li>Green</li>
+<li>Blue  </li>
+</ul>
+</blockquote>
+<p>也等同于  </p>
+<blockquote>
+<ul>
+<li>Red</li>
+<li>Green</li>
+<li>Bule</li>
+</ul>
+</blockquote>
+<p>有序列表则使用数字接着一个英文句点：</p>
+<ol>
+<li>Read</li>
+<li>Green </li>
+<li>Blue</li>
+</ol>
+<p>很重要的一点是，列表标记上使用的数字并不会影响输出的HTML结果。  </p>
+<p>列表项目标记通常是放在最左边，但是其实也可以缩进，最多三个空格，项目标记后面则一定要接着至少一个空格或制表符。</p>
+<p>为了避免不需要的列表项产生，可以用反斜杠进行修饰。</p>
+<h2 id="代码区块"><a href="#代码区块" class="headerlink" title="代码区块"></a>代码区块</h2><p>只需要一个tab或4个空格即可</p>
+<pre><code>public static void main(String[] args) {
+    System.out.println(&quot;Hello World!&quot;);
+}
+</code></pre><h2 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h2><p>可以在一行中用三个以上的星号、减号来建立一个分隔线，行内不能有其他东西。也可以在星号或是减号中间插入空格。</p>
+<hr>
+<hr>
+<h1 id="区段元素"><a href="#区段元素" class="headerlink" title="区段元素"></a>区段元素</h1><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>Markdown支持两种形式的链接语法：行内式和参考式两种形式。不管是哪一种，链接文字都是用[方括号]来标记。</p>
+<p>要建立一个行内式的链接，只要在方括号后面紧接着圆括号并插入网址链接即可，如果想加上链接的title文字，只要在网址后面用双引号把title文字包起来即可。</p>
+<p>This is <a href="http://example.com/" title="Title" target="_blank" rel="noopener">an example</a></p>
+<p>如果是要链接到同样主机的资源，可以使用相对路径：</p>
+<p>See my <a href="/about/">about</a> page for details.</p>
+<p>参考式的链接是在链接文字的阔号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接的标记：</p>
+<p>This is [an expample][id] reference-style link.</p>
+<p>接着，在文件的任意处，可以把这个标记的链接内容定义出来，后面的title用双引号，单引号，圆括号阔起来均可：</p>
+<p>[id]:<a href="http://example.com/\" target="_blank" rel="noopener">http://example.com/\</a> \”Title” </p>
+<p>链接标签并不区分大小写，隐式链接标记等同于链接文字。  </p>
+<p>链接的定义可以放在文件中的任何一个地方，通常放在段落的后面或者文件的最后面。</p>
+<h2 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h2><p>Markdown使用*和_作为标记强调字词的符号。其中使用单个字符是斜体，两个是加粗。</p>
+<p><em>Strong</em></p>
+<p><strong>Strong</strong></p>
+<p><em>Strong</em></p>
+<p><strong>Strong</strong></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>如果要标记一小段行内代码，可以用反引号把它包起来：</p>
+<p>Use the <code>printf()</code> function</p>
+<p>如果要在代码区段内插入反引号，可以用多个反引号来开启和结束代码区段。</p>
+<p>A single backtick in a code span: <code>`</code></p>
+<p>A backtick-delimited string in a code span: <code>`foo`</code></p>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>Markdown使用一种和链接很相似的语法来标记图片，同样也允许两种样式：行内式与参考式。</p>
+<p>行内式语法如下：</p>
+<ul>
+<li>一个感叹号！</li>
+<li>接着一个方括号，里面放上图片的替代文字</li>
+<li>接着一个圆括号，里面放上图片的地址，最后还可以用引号包住并加上选择性的‘title’文字。</li>
+</ul>
+<h1 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h1><h2 id="反斜杠"><a href="#反斜杠" class="headerlink" title="反斜杠"></a>反斜杠</h2><p>Markdown可以利用反斜杠来插入一些在语法上有其他意义的符号。Markdown支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
+<blockquote>
+<ul>
+<li>\ </li>
+<li>`</li>
+<li>*</li>
+<li>_</li>
+<li>{}</li>
+<li>[]</li>
+<li>()</li>
+<li>#</li>
+<li>+</li>
+<li>-</li>
+<li>.</li>
+<li>!</li>
+</ul>
+</blockquote>
+<h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><p>Markdown支持以比较简短的自动链接形式来处理网址和电子邮箱，只要是尖括号包起来的，Markdown就会自动把它转成链接。</p>
+<p><a href="http://example.com" target="_blank" rel="noopener">http://example.com</a></p>
+<p><a href="mailto:&#x39;&#57;&#x35;&#52;&#x34;&#53;&#54;&#x38;&#x30;&#x40;&#113;&#113;&#x2e;&#99;&#111;&#x6d;" target="_blank" rel="noopener">&#x39;&#57;&#x35;&#52;&#x34;&#53;&#54;&#x38;&#x30;&#x40;&#113;&#113;&#x2e;&#99;&#111;&#x6d;</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">MarkDown</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/13/MarkDown/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-ubuntu" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -202,7 +390,7 @@ ga('send', 'pageview');
 
         
         <a href="/2019/05/11/ubuntu/" class="archive-article-date">
-  	<time datetime="2019-05-11T07:33:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-11</time>
+  	<time datetime="2019-05-11T13:33:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-11</time>
 </a>
         
       </header>
@@ -216,7 +404,17 @@ ga('send', 'pageview');
 输入如原密码
 按提示输入新密码
 按提示再次输入新密码
-</code></pre>
+</code></pre><h2 id="如何以root登陆GUI"><a href="#如何以root登陆GUI" class="headerlink" title="如何以root登陆GUI"></a>如何以root登陆GUI</h2><p>Ubuntu默认是不允许用root账号登陆GUI的，想以root登陆GUI的话，首先要有root账号，按照<em>ubuntu使用su切换root用户失败</em>操作即可，然后要屏蔽系统配置对root登陆GUI的限制：</p>
+<ul>
+<li><p>以root身份进入/etc/pam.d目录，修改gdm-autologin和gdm-password文件，在gdm-autologin中注释掉<code>auth required pam_succeed_if.so user != root quiet_success</code>；在gdm-password中注释掉 <code>auth required pam_succeed_if.so user != root quiet_success</code>。</p>
+</li>
+<li><p>修改/root/.profile文件：将文件末尾的<code>mesg n || true</code>修改成<code>tty -s&amp;&amp;mesg n || true</code>k</p>
+</li>
+</ul>
+<p>最后重启系统即可。</p>
+<p><strong>注意：配置文件里面注释语句时要使用<code>#</code>,不小心使用<code>//,/* */</code>这类符号注释的话会造成系统无法开机，需要在恢复模式下对文件再次修改。</strong></p>
+<h2 id="ubuntu下VSCode无法输入中文的解决方案"><a href="#ubuntu下VSCode无法输入中文的解决方案" class="headerlink" title="ubuntu下VSCode无法输入中文的解决方案"></a>ubuntu下VSCode无法输入中文的解决方案</h2><p>出现这种问题很可能是从snap商店下载安装造成的，具体原因不明，解决方法很简单粗暴，<strong>卸载当前版本，去VSCode官网下载安装即可正常输入中文</strong></p>
+
       
 
       
@@ -240,6 +438,194 @@ ga('send', 'pageview');
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/05/11/ubuntu/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Vim编辑器与Shell脚本" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/10/Vim编辑器与Shell脚本/">Vim编辑器</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/10/Vim编辑器与Shell脚本/" class="archive-article-date">
+  	<time datetime="2019-05-10T13:33:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="Vim编辑器"><a href="#Vim编辑器" class="headerlink" title="Vim编辑器"></a>Vim编辑器</h2><p>三种模式</p>
+<ul>
+<li><p>command mode：控制光标移动，可对文本进行复制，粘贴，删除和查找等工作。</p>
+</li>
+<li><p>insert mode：正常的文本输入。</p>
+</li>
+<li><p>command line mode：保存或退出文档，以及设置编辑环境。</p>
+</li>
+</ul>
+<p>Vim中常用的命令</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dd</td>
+<td>删除（剪切）光标所在的整行</td>
+</tr>
+<tr>
+<td>5dd</td>
+<td>删除（剪切）从光标处开始的5行</td>
+</tr>
+<tr>
+<td>yy</td>
+<td>复制光标所在的整行</td>
+</tr>
+<tr>
+<td>5yy</td>
+<td>复制从光标处开始的5行</td>
+</tr>
+<tr>
+<td>n</td>
+<td>显示搜索命令定位到的下一个字符串</td>
+</tr>
+<tr>
+<td>N</td>
+<td>显示搜索命令定位到的上一个字符串</td>
+</tr>
+<tr>
+<td>u</td>
+<td>撤销上一步的操作</td>
+</tr>
+<tr>
+<td>p</td>
+<td>将之前删除（dd）或复制（yy）过的数据粘贴到光标后面</td>
+</tr>
+</tbody>
+</table>
+<p>command line mode模式中可用的命令</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:w</td>
+<td>保存</td>
+</tr>
+<tr>
+<td>:q</td>
+<td>退出</td>
+</tr>
+<tr>
+<td>:q!</td>
+<td>强制退出(放弃对文档的修改内容)</td>
+</tr>
+<tr>
+<td>:wq!</td>
+<td>强制保存退出</td>
+</tr>
+<tr>
+<td>:set nu</td>
+<td>显示行号</td>
+</tr>
+<tr>
+<td>:set nonu</td>
+<td>不显示行号</td>
+</tr>
+<tr>
+<td>:命令</td>
+<td>执行该命令</td>
+</tr>
+<tr>
+<td>:整数</td>
+<td>跳转到该行</td>
+</tr>
+<tr>
+<td>:s/one/two</td>
+<td>将当前光标所在行的第一个one替换成two</td>
+</tr>
+<tr>
+<td>:s/one/two/g</td>
+<td>将当前光标所在行的所有one替换成two</td>
+</tr>
+<tr>
+<td>:%s/one/two/g</td>
+<td>将全文中的所有one替换成two</td>
+</tr>
+<tr>
+<td>?字符串</td>
+<td>在文本中从下至上搜索该字符串</td>
+</tr>
+<tr>
+<td>/字符串</td>
+<td>在文本中从上至下搜索该字符串</td>
+</tr>
+</tbody>
+</table>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/10/Vim编辑器与Shell脚本/">展开全文 >></a>
         </p>
       
 
@@ -506,6 +892,416 @@ ga('send', 'pageview');
 
 
   
+    <article id="post-管道符、重定向与环境变量" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/09/管道符、重定向与环境变量/">管道符、重定向与环境变量</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/09/管道符、重定向与环境变量/" class="archive-article-date">
+  	<time datetime="2019-05-09T12:33:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="输入输出重定向"><a href="#输入输出重定向" class="headerlink" title="输入输出重定向"></a>输入输出重定向</h2><p><strong>简而言之，输入重定向就是把文件导入到命令中，而输出重定向则是把原本要输出到屏幕的数据信息写入到制定文件。</strong></p>
+<ul>
+<li><p>标准输入重定向（STDIN，文件描述符为0）：默认从键盘输入，也可以从其他文件或命令中输入。</p>
+</li>
+<li><p>标准输出重定向（STDOUT，文件描述符为1）：默认输出到屏幕。</p>
+</li>
+<li><p>错误输出重定向（STDERR，文件描述符为2）：默认输出到屏幕。</p>
+</li>
+</ul>
+<p>输入重定向中用到的符号及作用</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命令 &lt; 文件</td>
+<td>将文件作为命令的标准输入</td>
+</tr>
+<tr>
+<td>命令 &lt;&lt; 分界符</td>
+<td>从标准输入中读入，知道遇见分界符才停止</td>
+</tr>
+<tr>
+<td>命令 &lt;文件1&gt; 文件2</td>
+<td>将文件1作为命令的标准输入并将标准输入到文件2</td>
+</tr>
+</tbody>
+</table>
+<p>输出重定向中用到的符号及作用</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命令&gt;文件</td>
+<td>将标准输出重定向到一个文件中（将清空原文件数据</td>
+</tr>
+<tr>
+<td>命令2&gt;文件</td>
+<td>将错误输出重定向到一个文件中（将清空原文件数据)</td>
+</tr>
+<tr>
+<td>命令&gt;&gt;文件</td>
+<td>将标准输出重定向到一个文件中（将追加到原有内容的后面）</td>
+</tr>
+<tr>
+<td>命令2&gt;&gt;文件</td>
+<td>将错误输出重定向到一个文件中（将追加到原有内容的后面）</td>
+</tr>
+<tr>
+<td>命令&gt;&gt;文件2&gt;&amp;1 或 命令&amp;&gt;&gt;文件</td>
+<td>将标准输出与错误输出共同写入到文件中（追加到原有内容的后面）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="管道命令符"><a href="#管道命令符" class="headerlink" title="管道命令符"></a>管道命令符</h2><p><strong>把一个原本要输出到屏幕的数据当作是后一个命令的标准输入</strong></p>
+<h2 id="命令行的通配符"><a href="#命令行的通配符" class="headerlink" title="命令行的通配符"></a>命令行的通配符</h2><ul>
+<li><p>*：匹配零个或多个字符</p>
+</li>
+<li><p>？：匹配多个字符</p>
+</li>
+<li><p>[0-9]：匹配0到9中的一个字符</p>
+</li>
+<li><p>[abc]：匹配abc中的一个字符</p>
+</li>
+</ul>
+<h2 id="常用转义字符"><a href="#常用转义字符" class="headerlink" title="常用转义字符"></a>常用转义字符</h2><p>四个最常用转义字符</p>
+<ul>
+<li><p>反斜杠()：使反斜杠后面的一个变量变为单纯的字符串。</p>
+</li>
+<li><p>单引号(‘’)：转义其中所有的变量为单纯的字符串。</p>
+</li>
+<li><p>双引号(“”)：保留其中的变量属性，不进行转义处理。</p>
+</li>
+<li><p>反引号(<code></code>)：把其中的命令执行后返回结果。</p>
+</li>
+</ul>
+<h2 id="重要的环境变量"><a href="#重要的环境变量" class="headerlink" title="重要的环境变量"></a>重要的环境变量</h2><p><em>变量是计算机系统用于保存可变值的数据类型。</em></p>
+<p>命令在Linux中执行的四个步骤：</p>
+<ol>
+<li><p>判断用户是否以绝对路径的方式输入命令，如果是的话则直接执行。</p>
+</li>
+<li><p>Linux系统检查用户输入的命令是否为“别名命令”。</p>
+</li>
+<li><p>Bash解释器判断用户输入的是内部命令还是外部命令，内部命令由指示器直接执行。</p>
+</li>
+<li><p>系统在多个路径中查找用户输入的命令文件。</p>
+</li>
+</ol>
+<p>Linux系统中最重要的10个环境变量</p>
+<table>
+<thead>
+<tr>
+<th>变量名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HOME</td>
+<td>用户的主目录</td>
+</tr>
+<tr>
+<td>SHELL</td>
+<td>用户在使用的Shell解释器名称</td>
+</tr>
+<tr>
+<td>HISTSIZE</td>
+<td>输出的历史命令记录条数</td>
+</tr>
+<tr>
+<td>HISTFILESIZE</td>
+<td>保存的历史记录命令条数</td>
+</tr>
+<tr>
+<td>MAIL</td>
+<td>邮件保存路径</td>
+</tr>
+<tr>
+<td>LANG</td>
+<td>系统语言，语系名称</td>
+</tr>
+<tr>
+<td>RANDOM</td>
+<td>生成一个随机数字</td>
+</tr>
+<tr>
+<td>PS1</td>
+<td>Bash解释器的提示符</td>
+</tr>
+<tr>
+<td>PATH</td>
+<td>定义解释器搜索用户执行命令的路径</td>
+</tr>
+<tr>
+<td>EDITOR</td>
+<td>用户默认的文本编辑器</td>
+</tr>
+</tbody>
+</table>
+<p>创建变量 ：var=value</p>
+<p>可通过export var将声明的变量提升为全局变量。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/09/管道符、重定向与环境变量/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-常用指令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/06/常用指令/">Linux常用指令</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/06/常用指令/" class="archive-article-date">
+  	<time datetime="2019-05-06T13:23:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="常用系统工作命令"><a href="#常用系统工作命令" class="headerlink" title="常用系统工作命令"></a>常用系统工作命令</h2><ol>
+<li><p>echo : 用于在终端输出字符串或变量提取后的值。格式：echo[string|$var]。 </p>
+</li>
+<li><p>date : 用于显示及设置系统的时间或日期，格式：data[option][+format]。</p>
+</li>
+<li><p>reboot : 重启。</p>
+</li>
+<li><p>poweroff : 关机。</p>
+</li>
+<li><p>wget : 在终端中下载网络文件，格式：wget[para]url。</p>
+</li>
+<li><p>PS : 查看系统中的进程状态，格式：ps[para]，该命令可以省略-，常用ps aux。</p>
+</li>
+</ol>
+<ul>
+<li>常见进程状态</li>
+<li>R(运行)：进程正在运行或在运行队列中等待；</li>
+<li>S(中断)：进程处于休眠状态，当某个条件形成后或者接受到信号时，则脱离该状态；</li>
+<li>D(不可中断)：进程不响应系统异步信号，即便用kill命令也不能将其中断；</li>
+<li>Z(僵死)：进程已经终止，但进程描述符依然存在，直到父进程调用wait4()系统函数将进程释放；</li>
+<li>T(停止)：进程收到停止信号后停止运行。</li>
+</ul>
+<ol>
+<li><p>top：动态监视进程活动和系统负载等信息。</p>
+</li>
+<li><p>pidof：查询某个指定服务进程的PID值，格式：pidof[para][service name]。</p>
+</li>
+<li><p>kill：终止某个指定PID的服务进程，格式：kill[para][PID]。</p>
+</li>
+<li><p>killall：终止某个指定名称的服务所对应的全部进程，格式：killal[para][process name]。</p>
+</li>
+</ol>
+<h2 id="系统状态检测命令"><a href="#系统状态检测命令" class="headerlink" title="系统状态检测命令"></a>系统状态检测命令</h2><ol>
+<li><p>ifconfig：获取网卡配置与网络状态等信息，格式：ifconfig[net device][para]。</p>
+</li>
+<li><p>uname：查看系统内核与系统版本等信息，格式：uname[-a]。</p>
+</li>
+<li><p>uptime：查看系统的负载信息。</p>
+</li>
+<li><p>free：显示当前系统中内存的使用量信息，格式：free[-h]。</p>
+</li>
+<li><p>who：查看当前登入主机的用户终端信息，格式：who[para]。</p>
+</li>
+<li><p>last：查看所有系统的登录记录，格式：last[para]。</p>
+</li>
+<li><p>history：显示历史执行过的命令，格式：history[-c]。</p>
+</li>
+<li><p>sosreport：收集系统配置及架构信息并输出诊断文档。</p>
+</li>
+</ol>
+<h2 id="工作目录切换命令"><a href="#工作目录切换命令" class="headerlink" title="工作目录切换命令"></a>工作目录切换命令</h2><ol>
+<li><p>pwd：显示用户当前所处的工作目录，格式：pwd[options]。</p>
+</li>
+<li><p>cd：切换工作路径，格式：cd[folder’s name]，-：上一次所处的目录，..上一级目录，～当前用户主目录。</p>
+</li>
+<li><p>ls：显示目录中的文件信息，格式：ls[options][file]。</p>
+</li>
+</ol>
+<h2 id="文本文件编辑命令"><a href="#文本文件编辑命令" class="headerlink" title="文本文件编辑命令"></a>文本文件编辑命令</h2><ol>
+<li><p>cat：查看纯文本文件（内容较少的），格式：cat[options][file],-n 显示行号。</p>
+</li>
+<li><p>more：查看纯文本文件（内容较多的），格式：more[options]file。</p>
+</li>
+<li><p>head：查看纯文本文件的前N行，格式：head[options][file]。</p>
+</li>
+<li><p>tail：查看纯文本文件的后N行或持续刷新内容，格式：tail[options][file]。</p>
+</li>
+<li><p>tr：替换文本文件中的字符，格式：tr[原字符][目标字符]。</p>
+</li>
+<li><p>wc：统计指定文本的行数、字数、字节数，格式：wc[para]file。</p>
+</li>
+<li><p>stat：查看文件的具体存储信息和时间等信息，格式：stat file。</p>
+</li>
+<li><p>cut：按列提取文本字符，格式为：cut[para]file。</p>
+</li>
+<li><p>diff：比较多个文本文件的差异，格式：diff[para]file。</p>
+</li>
+</ol>
+<h2 id="文件目录管理命令"><a href="#文件目录管理命令" class="headerlink" title="文件目录管理命令"></a>文件目录管理命令</h2><ol>
+<li><p>touch：创建空白文件或设置文件的时间，格式：touch[options][file]。</p>
+</li>
+<li><p>mkdir：创建空白的目录，格式：mkdir[option]folder。</p>
+</li>
+<li><p>cp：复制文件或目录，格式：cp[option] sourcefile targetfile。</p>
+</li>
+</ol>
+<p>复制操作的三种情况：</p>
+<ul>
+<li><p>目标文件是目录，则会把源文件复制到该目录；</p>
+</li>
+<li><p>目标文件也是普通文件，则询问是否要覆盖它；</p>
+</li>
+<li><p>目标文件不存在，则执行正常的复制操作。</p>
+</li>
+</ul>
+<ol>
+<li><p>mv：用于剪切文件或将文件重命名，格式：mv[option] sourcefile [targetpath|targetfile]。</p>
+</li>
+<li><p>rm：用于删除文件或目录，格式：rm[option]file。</p>
+</li>
+<li><p>dd：用于按照制定大小和个数的数据块来复制文件或转换文件，格式：dd[para]，if=输入文件名，of=输出文件名，bs=每个块的大小，count=要复制从的块的个数。</p>
+</li>
+</ol>
+<ol>
+<li>file：用于查看文件的类型，格式：file filename。</li>
+</ol>
+<h2 id="打包压缩与搜索命令"><a href="#打包压缩与搜索命令" class="headerlink" title="打包压缩与搜索命令"></a>打包压缩与搜索命令</h2><ol>
+<li><p>tar：对文件进行打包压缩或解压，格式：tar[options][file]，c压缩，x解压，t查看，z使用Gzip，j使用bzip2，，显示解压/压缩过程，p保留原始的权限与属性。</p>
+</li>
+<li><p>grep：在文本中执行关键词搜索，并显示匹配的结果，格式：grep[options][file]，n显示行号，反选信息。</p>
+</li>
+<li><p>find：按照制定条件来查找文件，格式：find[path]condition。</p>
+</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/06/常用指令/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-New_Begin" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -603,293 +1399,6 @@ ga('send', 'pageview');
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/11/26/suibi-2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-generate" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/22/generate/">generate</a>
-    </h1>
-  
-
-        
-        <a href="/2018/11/22/generate/" class="archive-article-date">
-  	<time datetime="2018-11-22T15:04:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/22/generate/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-suibi-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/22/suibi-1/">suibi</a>
-    </h1>
-  
-
-        
-        <a href="/2018/11/22/suibi-1/" class="archive-article-date">
-  	<time datetime="2018-11-22T15:02:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="早睡早起身体好"><a href="#早睡早起身体好" class="headerlink" title="早睡早起身体好"></a>早睡早起身体好</h2>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/22/suibi-1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-adb" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/21/adb/">adb</a>
-    </h1>
-  
-
-        
-        <a href="/2018/11/21/adb/" class="archive-article-date">
-  	<time datetime="2018-11-21T15:15:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="常用ADB命令"><a href="#常用ADB命令" class="headerlink" title="常用ADB命令"></a>常用ADB命令</h2><p>ADB的全称是Android Debug Bridge，起调试桥的作用。</p>
-<hr>
-<p>1.adb devices       显示当前运行的全部设备。<br><br>2.adb start-server  启动ADB。<br><br>3.adb kill-server   停止ADB。<br><br>4.adb install -r [*.apk] 安装apk文件，[-l锁定该程序，-r重新安装该程序，-s安装到SD卡内]。<br><br>5.adb uninstall [packagename]  卸载应用程序 -k不删除程序运行所产生的数据和缓存目录。<br><br>6.adb pull 设备目录 本地目录    将设备中的文件复制到计算机本地目录。<br><br>7.adb push 本地目录 设备目录    将计算机本地文件复制到设备指定目录。<br><br>8.adb help          查看adb帮助信息。                            <br><br>9.adb shell screencap -p 本地目录 截屏<br><br>10.adb shell dumpsys dbinfo[packgaename] 查看指定包名的应用的数据库存储信息。<br><br>11.adb shell dumpsys meminfo[packagename/pid] 查看指定的进程或pid的内存信息。<br><br>12.adb shell dumpsys [packagename] 查看指定包名应用的详细信息。<br><br>13.adb shell dumpsys activity top  查看当前应用的activity信息。<br><br>14.adb bugreport 查看bug报告。<br><br>15.adb shell pm list packages 列出手机装的所有apk包名[-s系统应用，-3第三方应用]。<br><br>16.adb shell pm clear [packagename] 清除应用缓存信息。<br><br>17.adb shell am start -n [packgaename + activityname] 启动应用程序页面。<br><br>18.adb shell am force-stop [packagename] 强制停止应用。<br><br>19.adb shell logcat -b radio 记录无线通信日志。<br><br>20.adb get-serialno          获取设备序列号。 <br><br>21.adb shell sqlit3</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/21/adb/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-datastructure-13" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/20/datastructure-13/">datastructure-13</a>
-    </h1>
-  
-
-        
-        <a href="/2018/11/20/datastructure-13/" class="archive-article-date">
-  	<time datetime="2018-11-20T14:55:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="数据结构-13"><a href="#数据结构-13" class="headerlink" title="数据结构-13"></a>数据结构-13</h2><h3 id="树"><a href="#树" class="headerlink" title="树"></a>树</h3><p>树是n个有限节点的集合，对于非空树：有且只有一个根节点；除根节点以外的其余节点可分为m个互不相交的有限集，其中每个集合本身又是一棵树，称为根的子树。<br><br>树的表示形式十分丰富，有树形图，嵌套集合，广义表，凹入法等。<br><br>树的基本术语：<br><br>节点：树中的一个独立单元，包含一个数据元素及若干指向其子树的分支。<br><br>节点的度：节点拥有的子树数称为节点的度。<br><br>树的度：树内各节点度的最大值。<br><br>叶子：度为0的节点称为叶子或终端节点。<br><br>非终端节点：度不为0的节点。<br><br>双亲和孩子：节点的子树的根称为该节点的孩子，相应地，该节点称为孩子的双亲。<br><br>兄弟：同一个双亲的孩子之间互称为兄弟。<br><br>祖先：从根到该该节点所经分支上的所有节点。<br><br>子孙：以某节点为根的子树中的任意节点都成为该节点的子孙。<br><br>层次：节点的层次从根节点算起，根为第一层。<br><br>堂兄弟：双亲在同一层的节点互为堂兄弟。<br><br>树的深度：树中节点的最大层次称为树的高度或深度。<br><br>有序树和无序树：树中节点的各子树从左到右是有次序的为有序树，否则为无序树。<br><br>森林：m棵互不相交的树的集合。</p>
-<hr>
-<p>二叉树<br><br>二叉树每个节点至多只有两棵子树，且子树有左右之分，其次序不能任意颠倒。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/20/datastructure-13/">展开全文 >></a>
         </p>
       
 
@@ -1020,11 +1529,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">

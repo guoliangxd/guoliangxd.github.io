@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://guoliangxd.github.io/2019/05/11/ubuntu/index.html">
 <meta property="og:site_name" content="Kirby&#39;s Blog">
 <meta property="og:description" content="在这里记录学习使用Ubuntu过程中踩过的各种坑如何让Ubuntu支持exat文件系统exfat文件系统支持4G以上的大文件，是大容量U盘最常用的格式，但Ubuntu默认是不支持exfat的，通过以下指令可以添加对exfat的支持： sudo apt-get install exfat-utils          ubuntu使用su切换root用户失败在密码正确的情况下出现这种情况是因为roo">
-<meta property="og:updated_time" content="2019-05-12T15:51:17.436Z">
+<meta property="og:updated_time" content="2019-05-12T16:34:22.746Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu">
 <meta name="twitter:description" content="在这里记录学习使用Ubuntu过程中踩过的各种坑如何让Ubuntu支持exat文件系统exfat文件系统支持4G以上的大文件，是大容量U盘最常用的格式，但Ubuntu默认是不支持exfat的，通过以下指令可以添加对exfat的支持： sudo apt-get install exfat-utils          ubuntu使用su切换root用户失败在密码正确的情况下出现这种情况是因为roo">
@@ -202,7 +202,7 @@ ga('send', 'pageview');
 
         
         <a href="/2019/05/11/ubuntu/" class="archive-article-date">
-  	<time datetime="2019-05-11T07:33:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-11</time>
+  	<time datetime="2019-05-11T13:33:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-11</time>
 </a>
         
       </header>
@@ -216,7 +216,17 @@ ga('send', 'pageview');
 输入如原密码
 按提示输入新密码
 按提示再次输入新密码
-</code></pre>
+</code></pre><h2 id="如何以root登陆GUI"><a href="#如何以root登陆GUI" class="headerlink" title="如何以root登陆GUI"></a>如何以root登陆GUI</h2><p>Ubuntu默认是不允许用root账号登陆GUI的，想以root登陆GUI的话，首先要有root账号，按照<em>ubuntu使用su切换root用户失败</em>操作即可，然后要屏蔽系统配置对root登陆GUI的限制：</p>
+<ul>
+<li><p>以root身份进入/etc/pam.d目录，修改gdm-autologin和gdm-password文件，在gdm-autologin中注释掉<code>auth required pam_succeed_if.so user != root quiet_success</code>；在gdm-password中注释掉 <code>auth required pam_succeed_if.so user != root quiet_success</code>。</p>
+</li>
+<li><p>修改/root/.profile文件：将文件末尾的<code>mesg n || true</code>修改成<code>tty -s&amp;&amp;mesg n || true</code>k</p>
+</li>
+</ul>
+<p>最后重启系统即可。</p>
+<p><strong>注意：配置文件里面注释语句时要使用<code>#</code>,不小心使用<code>//,/* */</code>这类符号注释的话会造成系统无法开机，需要在恢复模式下对文件再次修改。</strong></p>
+<h2 id="ubuntu下VSCode无法输入中文的解决方案"><a href="#ubuntu下VSCode无法输入中文的解决方案" class="headerlink" title="ubuntu下VSCode无法输入中文的解决方案"></a>ubuntu下VSCode无法输入中文的解决方案</h2><p>出现这种问题很可能是从snap商店下载安装造成的，具体原因不明，解决方法很简单粗暴，<strong>卸载当前版本，去VSCode官网下载安装即可正常输入中文</strong></p>
+
       
 
       
@@ -330,9 +340,18 @@ ga('send', 'pageview');
   
 <nav id="article-nav">
   
+    <a href="/2019/05/13/MarkDown/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          MarkDown初步
+        
+      </div>
+    </a>
   
-    <a href="/2019/05/10/first_blog/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">三月随笔</div>
+  
+    <a href="/2019/05/10/Vim编辑器与Shell脚本/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Vim编辑器</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -359,7 +378,7 @@ ga('send', 'pageview');
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#在这里记录学习使用Ubuntu过程中踩过的各种坑"><span class="toc-number">1.</span> <span class="toc-text">在这里记录学习使用Ubuntu过程中踩过的各种坑</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#如何让Ubuntu支持exat文件系统"><span class="toc-number">1.1.</span> <span class="toc-text">如何让Ubuntu支持exat文件系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ubuntu使用su切换root用户失败"><span class="toc-number">1.2.</span> <span class="toc-text">ubuntu使用su切换root用户失败</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#在这里记录学习使用Ubuntu过程中踩过的各种坑"><span class="toc-number">1.</span> <span class="toc-text">在这里记录学习使用Ubuntu过程中踩过的各种坑</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#如何让Ubuntu支持exat文件系统"><span class="toc-number">1.1.</span> <span class="toc-text">如何让Ubuntu支持exat文件系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ubuntu使用su切换root用户失败"><span class="toc-number">1.2.</span> <span class="toc-text">ubuntu使用su切换root用户失败</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何以root登陆GUI"><span class="toc-number">1.3.</span> <span class="toc-text">如何以root登陆GUI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ubuntu下VSCode无法输入中文的解决方案"><span class="toc-number">1.4.</span> <span class="toc-text">ubuntu下VSCode无法输入中文的解决方案</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -385,7 +404,7 @@ ga('send', 'pageview');
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "Sat May 11 2019 15:33:26 GMT+0800",
+  id: "Sat May 11 2019 21:33:26 GMT+0800",
   owner: 'guoliangxd',
   repo: 'guoliangxd.github.io',
   oauth: {
@@ -493,11 +512,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
