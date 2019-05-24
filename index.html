@@ -189,6 +189,127 @@ ga('send', 'pageview');
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-用户身份与与文件权限" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/24/用户身份与与文件权限/">用户身份与与文件权限</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/24/用户身份与与文件权限/" class="archive-article-date">
+  	<time datetime="2019-05-24T13:41:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="用户身份与能力"><a href="#用户身份与能力" class="headerlink" title="用户身份与能力"></a>用户身份与能力</h2><p>User IDentification（UID）:</p>
+<ul>
+<li><p>系统管理员：0</p>
+</li>
+<li><p>系统用户：1-999，Linux为了避免某个服务程序出现漏洞而被黑客提权至整台服务器，默认服务程序会有独立的系统用户负责运行，进而有效控制被破坏范围</p>
+</li>
+<li><p>普通用户：1000-，由管理员创建的用于日常工作的用户</p>
+</li>
+</ul>
+<p>Linux中创建每个用户时，将自动创建一个与其同名的基本用户组，而且这个基本用户组只有该用户一个人。如果该用户以后被归入其他用户组，则这个其他用户组称之为扩展用户组。一个用户只有一个基本用户组，但是可以有多个扩展用户组。</p>
+<ul>
+<li><p>useradd：创建新的用户，格式：useradd[option]username。-d:home,-e:deadtime,-u:UID,-g:basic group,-G:extend group,-N:no basic group,-s:Shell.</p>
+</li>
+<li><p>groupadd：创建用户组，格式：groupadd[option]groupname</p>
+</li>
+<li><p>usermode：修改用户的属性，格式：usermod[option]username</p>
+</li>
+<li><p>id：显示用户信息，格式：id username.</p>
+</li>
+<li><p>passwd：修改用户密码、过期日期、认证信息等，格式：passwd[option][username]，root修改其他用户密码时不需要旧密码。</p>
+</li>
+<li><p>userdel：删除用户，格式：userdel[option]username。</p>
+</li>
+</ul>
+<h2 id="文件权限与归属"><a href="#文件权限与归属" class="headerlink" title="文件权限与归属"></a>文件权限与归属</h2><p>常见文件类型：</p>
+<ul>
+<li><p>-：普通文件</p>
+</li>
+<li><p>d：目录文件</p>
+</li>
+<li><p>l：链接文件</p>
+</li>
+<li><p>b：块设备文件</p>
+</li>
+<li><p>c：字符设备文件</p>
+</li>
+<li><p>p：管道文件</p>
+</li>
+</ul>
+<p>文件权限：</p>
+<ul>
+<li><p>r：可与读取目录内的文件列表</p>
+</li>
+<li><p>w：能够在目录内新增，删除，重命名文件</p>
+</li>
+<li><p>x：能够进入该目录</p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/24/用户身份与与文件权限/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-MarkDown" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -323,7 +444,7 @@ ga('send', 'pageview');
 </blockquote>
 <h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><p>Markdown支持以比较简短的自动链接形式来处理网址和电子邮箱，只要是尖括号包起来的，Markdown就会自动把它转成链接。</p>
 <p><a href="http://example.com" target="_blank" rel="noopener">http://example.com</a></p>
-<p><a href="mailto:&#x39;&#57;&#x35;&#52;&#x34;&#53;&#54;&#x38;&#x30;&#x40;&#113;&#113;&#x2e;&#99;&#111;&#x6d;" target="_blank" rel="noopener">&#x39;&#57;&#x35;&#52;&#x34;&#53;&#54;&#x38;&#x30;&#x40;&#113;&#113;&#x2e;&#99;&#111;&#x6d;</a></p>
+<p><a href="mailto:&#x39;&#57;&#53;&#x34;&#52;&#53;&#54;&#56;&#x30;&#64;&#x71;&#113;&#46;&#x63;&#x6f;&#x6d;" target="_blank" rel="noopener">&#x39;&#57;&#53;&#x34;&#52;&#53;&#54;&#56;&#x30;&#64;&#x71;&#113;&#46;&#x63;&#x6f;&#x6d;</a></p>
 
       
 
@@ -655,6 +776,80 @@ ga('send', 'pageview');
 
 
   
+    <article id="post-fuck" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/10/fuck/">这是一个测试</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/10/fuck/" class="archive-article-date">
+  	<time datetime="2019-05-10T11:48:13.503Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>欢迎来到我的私人博客，在这里我将记录并分享我在学习，工作，生活中的点点滴滴。</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=635076&auto=1&height=66"></iframe>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/10/fuck/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-first_blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -718,80 +913,6 @@ ga('send', 'pageview');
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/05/10/first_blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-fuck" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/10/fuck/">这是一个测试</a>
-    </h1>
-  
-
-        
-        <a href="/2019/05/10/fuck/" class="archive-article-date">
-  	<time datetime="2019-05-10T11:48:13.503Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>欢迎来到我的私人博客，在这里我将记录并分享我在学习，工作，生活中的点点滴滴。</p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=635076&auto=1&height=66"></iframe>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/10/fuck/">展开全文 >></a>
         </p>
       
 
@@ -1366,68 +1487,6 @@ ga('send', 'pageview');
 
 
   
-    <article id="post-suibi-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/26/suibi-2/">suibi</a>
-    </h1>
-  
-
-        
-        <a href="/2018/11/26/suibi-2/" class="archive-article-date">
-  	<time datetime="2018-11-26T14:58:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="要答辩了，加油啊"><a href="#要答辩了，加油啊" class="headerlink" title="要答辩了，加油啊"></a>要答辩了，加油啊</h3>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/26/suibi-2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1533,11 +1592,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Android</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">Android</a>
               </li>
              
               <li class="article-tag-list-item">
