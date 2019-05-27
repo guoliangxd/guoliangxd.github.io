@@ -257,6 +257,38 @@ ga('send', 'pageview');
 <li><p>x：能够进入该目录</p>
 </li>
 </ul>
+<p>三个权限对应4，2，1</p>
+<h2 id="文件的特殊权限"><a href="#文件的特殊权限" class="headerlink" title="文件的特殊权限"></a>文件的特殊权限</h2><ul>
+<li><p>SUID：一种对二进制程序进行设置的特殊权限，可以让二进制程序的执行者临时拥有owner权限（仅对拥有执行权限的二进制程序有效）。</p>
+</li>
+<li><p>SGID： 让执行者临时拥有所属组的权限；让某个目录中创建的文件自动继承该目录的用户组。</p>
+</li>
+<li><p>SBIT：保护位，设置该权限位确保用户只能删除自己的文件，不能删除其他用户的文件。</p>
+</li>
+</ul>
+<p>以上三种权限设置后分别替换原有所有者，组，其他组的x位为s，s，t，若本无x权限，则会替换为大写。</p>
+<ul>
+<li><p>chomod:设置目录或文件的权限，格式：chomod[para]permission file/dir。</p>
+</li>
+<li><p>chown:设置文件或目录的所有者或所属组，格式：chown[para]owner:group file/dir。</p>
+</li>
+</ul>
+<h2 id="文件的隐藏属性"><a href="#文件的隐藏属性" class="headerlink" title="文件的隐藏属性"></a>文件的隐藏属性</h2><ul>
+<li><p>chattr：设置文件的隐藏权限，格式：chattr[para]file。</p>
+</li>
+<li><p>lsattr：显示隐藏权限，格式：lsattr[para]file。</p>
+</li>
+</ul>
+<h2 id="文件访问控制列表"><a href="#文件访问控制列表" class="headerlink" title="文件访问控制列表"></a>文件访问控制列表</h2><p>一般权限，特殊权限，隐藏权限都是针对某一类用户设置的，如果希望对某个制定的用户进行单独的权限控制，需要用到文件的访问控制列表（ACL）。针对某个目录设置了ACL，则目录中的文件会继承其ACL；若针对文件设置了ACL，则文件不再继承其所在目录的ACL。</p>
+<ul>
+<li><p>setfacl：管理文件的ACL规则，格式：setface[para]file。</p>
+</li>
+<li><p>getfacl：显示文件上设置的ACL信息，格式：getfacl file。</p>
+</li>
+<li><p>sudo：给普通用户提供额外的权限来完成原本root管理员才能完成的任务，格式：sudo[para]command</p>
+</li>
+</ul>
+<p><strong><em>whereis命令可用于查找命令位置</em></strong></p>
 
       
 
@@ -444,7 +476,7 @@ ga('send', 'pageview');
 </blockquote>
 <h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><p>Markdown支持以比较简短的自动链接形式来处理网址和电子邮箱，只要是尖括号包起来的，Markdown就会自动把它转成链接。</p>
 <p><a href="http://example.com" target="_blank" rel="noopener">http://example.com</a></p>
-<p><a href="mailto:&#x39;&#57;&#53;&#x34;&#52;&#53;&#54;&#56;&#x30;&#64;&#x71;&#113;&#46;&#x63;&#x6f;&#x6d;" target="_blank" rel="noopener">&#x39;&#57;&#53;&#x34;&#52;&#53;&#54;&#56;&#x30;&#64;&#x71;&#113;&#46;&#x63;&#x6f;&#x6d;</a></p>
+<p><a href="mailto:&#x39;&#57;&#x35;&#x34;&#52;&#53;&#x36;&#56;&#x30;&#x40;&#x71;&#113;&#46;&#x63;&#x6f;&#x6d;" target="_blank" rel="noopener">&#x39;&#57;&#x35;&#x34;&#52;&#53;&#x36;&#56;&#x30;&#x40;&#x71;&#113;&#46;&#x63;&#x6f;&#x6d;</a></p>
 
       
 
@@ -776,80 +808,6 @@ ga('send', 'pageview');
 
 
   
-    <article id="post-fuck" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/10/fuck/">这是一个测试</a>
-    </h1>
-  
-
-        
-        <a href="/2019/05/10/fuck/" class="archive-article-date">
-  	<time datetime="2019-05-10T11:48:13.503Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>欢迎来到我的私人博客，在这里我将记录并分享我在学习，工作，生活中的点点滴滴。</p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=635076&auto=1&height=66"></iframe>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/10/fuck/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-first_blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -913,6 +871,80 @@ ga('send', 'pageview');
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/05/10/first_blog/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-fuck" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/10/fuck/">这是一个测试</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/10/fuck/" class="archive-article-date">
+  	<time datetime="2019-05-10T11:48:13.503Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>欢迎来到我的私人博客，在这里我将记录并分享我在学习，工作，生活中的点点滴滴。</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=635076&auto=1&height=66"></iframe>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/10/fuck/">展开全文 >></a>
         </p>
       
 
@@ -1592,11 +1624,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">Android</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Android</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
