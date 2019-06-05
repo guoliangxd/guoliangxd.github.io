@@ -189,6 +189,105 @@ ga('send', 'pageview');
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-iptables与firewalld" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/06/03/iptables与firewalld/">iptables与firewalld</a>
+    </h1>
+  
+
+        
+        <a href="/2019/06/03/iptables与firewalld/" class="archive-article-date">
+  	<time datetime="2019-06-03T15:09:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="防火墙管理工具"><a href="#防火墙管理工具" class="headerlink" title="防火墙管理工具"></a>防火墙管理工具</h2><p>iptables，firewalld并不是真正的防火墙，他们只是用来定义防火墙策略的防火墙管理工具，只是一种服务。iptable服务会把配置好的防火墙策略交由给内核层面的netfilter网络过滤器来处理。而firewalld服务则是把配置好的防火墙策略交由给内核层面的nftables包过滤框架来处理。</p>
+<h2 id="iptables"><a href="#iptables" class="headerlink" title="iptables"></a>iptables</h2><h3 id="策略与规则链"><a href="#策略与规则链" class="headerlink" title="策略与规则链"></a>策略与规则链</h3><p>防火墙会从上至下的顺序来读取配置的策略规则，在找到匹配项后就立即结束匹配工作并去执行匹配项中定义的行为。如果读完所有的策略规则后没有匹配项，就去执行默认的策略。</p>
+<p>iptables服务把用于处理或过滤流量的策略称之为规则，多条规则可以组成一个规则链，依数据包处理位置的不同可分为：</p>
+<ul>
+<li><p>PREROUTING</p>
+</li>
+<li><p>INPUT</p>
+</li>
+<li><p>OUTPUT</p>
+</li>
+<li><p>FORWARD</p>
+</li>
+<li><p>POSTROUTING</p>
+</li>
+</ul>
+<p>规则链可能采用的动作：</p>
+<ul>
+<li><p>ACCEPT</p>
+</li>
+<li><p>REJECT</p>
+</li>
+<li><p>LOG</p>
+</li>
+<li><p>DROP</p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/06/03/iptables与firewalld/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-用户身份与与文件权限" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -476,7 +575,7 @@ ga('send', 'pageview');
 </blockquote>
 <h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><p>Markdown支持以比较简短的自动链接形式来处理网址和电子邮箱，只要是尖括号包起来的，Markdown就会自动把它转成链接。</p>
 <p><a href="http://example.com" target="_blank" rel="noopener">http://example.com</a></p>
-<p><a href="mailto:&#x39;&#x39;&#53;&#52;&#52;&#x35;&#54;&#x38;&#x30;&#64;&#113;&#113;&#46;&#99;&#x6f;&#x6d;" target="_blank" rel="noopener">&#x39;&#x39;&#53;&#52;&#52;&#x35;&#54;&#x38;&#x30;&#64;&#113;&#113;&#46;&#99;&#x6f;&#x6d;</a></p>
+<p><a href="mailto:&#57;&#57;&#x35;&#x34;&#52;&#x35;&#x36;&#x38;&#x30;&#x40;&#x71;&#113;&#x2e;&#99;&#x6f;&#109;" target="_blank" rel="noopener">&#57;&#57;&#x35;&#x34;&#52;&#x35;&#x36;&#x38;&#x30;&#x40;&#x71;&#113;&#x2e;&#99;&#x6f;&#109;</a></p>
 
       
 
@@ -1455,70 +1554,6 @@ ga('send', 'pageview');
 
 
   
-    <article id="post-New_Begin" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/01/New_Begin/">新的开始</a>
-    </h1>
-  
-
-        
-        <a href="/2019/05/01/New_Begin/" class="archive-article-date">
-  	<time datetime="2019-05-01T11:33:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="新的开始"><a href="#新的开始" class="headerlink" title="新的开始"></a>新的开始</h1><hr>
-<p>从今天开始又要继续弃了将近半年的个人博客的坑了</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/01/New_Begin/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1644,11 +1679,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">C</a>
+                <a href="javascript:void(0)" class="js-tag color3">旅行</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">旅行</a>
+                <a href="javascript:void(0)" class="js-tag color2">C</a>
               </li>
             
             <div class="clearfix"></div>

@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://guoliangxd.github.io">
-  <title>datastruct-06 | Kirby&#39;s Blog</title>
+  <title>iptables与firewalld | Kirby&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="栈和队列栈(stack)：限定在表尾进行插入或删除操作的线性表，表尾称为栈顶(top)，表头称为栈底(bottom)。是后进先出(Last In First Out,LIFO)的线性表。队列(queue)：只允许在表的一端进行插入，在表的另一端进行删除，是一种先进先出(First In First Out,FIFO)的线性表。 应用案例数制转换：N = (N div d) * d + N mod">
-<meta name="keywords" content="数据结构">
+  <meta name="description" content="防火墙管理工具iptables，firewalld并不是真正的防火墙，他们只是用来定义防火墙策略的防火墙管理工具，只是一种服务。iptable服务会把配置好的防火墙策略交由给内核层面的netfilter网络过滤器来处理。而firewalld服务则是把配置好的防火墙策略交由给内核层面的nftables包过滤框架来处理。 iptables策略与规则链防火墙会从上至下的顺序来读取配置的策略规则，在找到匹">
+<meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="datastruct-06">
-<meta property="og:url" content="http://guoliangxd.github.io/2018/11/07/datastruct-06/index.html">
+<meta property="og:title" content="iptables与firewalld">
+<meta property="og:url" content="http://guoliangxd.github.io/2019/06/03/iptables与firewalld/index.html">
 <meta property="og:site_name" content="Kirby&#39;s Blog">
-<meta property="og:description" content="栈和队列栈(stack)：限定在表尾进行插入或删除操作的线性表，表尾称为栈顶(top)，表头称为栈底(bottom)。是后进先出(Last In First Out,LIFO)的线性表。队列(queue)：只允许在表的一端进行插入，在表的另一端进行删除，是一种先进先出(First In First Out,FIFO)的线性表。 应用案例数制转换：N = (N div d) * d + N mod">
-<meta property="og:updated_time" content="2018-11-07T14:28:06.000Z">
+<meta property="og:description" content="防火墙管理工具iptables，firewalld并不是真正的防火墙，他们只是用来定义防火墙策略的防火墙管理工具，只是一种服务。iptable服务会把配置好的防火墙策略交由给内核层面的netfilter网络过滤器来处理。而firewalld服务则是把配置好的防火墙策略交由给内核层面的nftables包过滤框架来处理。 iptables策略与规则链防火墙会从上至下的顺序来读取配置的策略规则，在找到匹">
+<meta property="og:updated_time" content="2019-06-05T14:53:08.559Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="datastruct-06">
-<meta name="twitter:description" content="栈和队列栈(stack)：限定在表尾进行插入或删除操作的线性表，表尾称为栈顶(top)，表头称为栈底(bottom)。是后进先出(Last In First Out,LIFO)的线性表。队列(queue)：只允许在表的一端进行插入，在表的另一端进行删除，是一种先进先出(First In First Out,FIFO)的线性表。 应用案例数制转换：N = (N div d) * d + N mod">
+<meta name="twitter:title" content="iptables与firewalld">
+<meta name="twitter:description" content="防火墙管理工具iptables，firewalld并不是真正的防火墙，他们只是用来定义防火墙策略的防火墙管理工具，只是一种服务。iptable服务会把配置好的防火墙策略交由给内核层面的netfilter网络过滤器来处理。而firewalld服务则是把配置好的防火墙策略交由给内核层面的nftables包过滤框架来处理。 iptables策略与规则链防火墙会从上至下的顺序来读取配置的策略规则，在找到匹">
   
     <link rel="alternative" href="/atom.xml" title="Kirby&#39;s Blog" type="application/atom+xml">
   
@@ -189,28 +189,52 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-datastruct-06" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-iptables与firewalld" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      datastruct-06
+      iptables与firewalld
     </h1>
   
 
         
-        <a href="/2018/11/07/datastruct-06/" class="archive-article-date">
-  	<time datetime="2018-11-06T16:13:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-07</time>
+        <a href="/2019/06/03/iptables与firewalld/" class="archive-article-date">
+  	<time datetime="2019-06-03T15:09:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="栈和队列"><a href="#栈和队列" class="headerlink" title="栈和队列"></a>栈和队列</h2><p>栈(stack)：限定在表尾进行插入或删除操作的线性表，表尾称为栈顶(top)，表头称为栈底(bottom)。是后进先出(Last In First Out,LIFO)的线性表。<br><br>队列(queue)：只允许在表的一端进行插入，在表的另一端进行删除，是一种先进先出(First In First Out,FIFO)的线性表。<br></p>
-<h3 id="应用案例"><a href="#应用案例" class="headerlink" title="应用案例"></a>应用案例</h3><p>数制转换：N = (N div d) * d + N mod d,反复计算到商为0，所有余数的倒序即为十进制N的d进制表示(栈)。<br><br>括号匹配的检验：期待的急迫成度(栈)。<br><br>表达式求值：算符优先法(栈)。<br><br>舞伴问题：先来先结对。</p>
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="防火墙管理工具"><a href="#防火墙管理工具" class="headerlink" title="防火墙管理工具"></a>防火墙管理工具</h2><p>iptables，firewalld并不是真正的防火墙，他们只是用来定义防火墙策略的防火墙管理工具，只是一种服务。iptable服务会把配置好的防火墙策略交由给内核层面的netfilter网络过滤器来处理。而firewalld服务则是把配置好的防火墙策略交由给内核层面的nftables包过滤框架来处理。</p>
+<h2 id="iptables"><a href="#iptables" class="headerlink" title="iptables"></a>iptables</h2><h3 id="策略与规则链"><a href="#策略与规则链" class="headerlink" title="策略与规则链"></a>策略与规则链</h3><p>防火墙会从上至下的顺序来读取配置的策略规则，在找到匹配项后就立即结束匹配工作并去执行匹配项中定义的行为。如果读完所有的策略规则后没有匹配项，就去执行默认的策略。</p>
+<p>iptables服务把用于处理或过滤流量的策略称之为规则，多条规则可以组成一个规则链，依数据包处理位置的不同可分为：</p>
+<ul>
+<li><p>PREROUTING</p>
+</li>
+<li><p>INPUT</p>
+</li>
+<li><p>OUTPUT</p>
+</li>
+<li><p>FORWARD</p>
+</li>
+<li><p>POSTROUTING</p>
+</li>
+</ul>
+<p>规则链可能采用的动作：</p>
+<ul>
+<li><p>ACCEPT</p>
+</li>
+<li><p>REJECT</p>
+</li>
+<li><p>LOG</p>
+</li>
+<li><p>DROP</p>
+</li>
+</ul>
 
       
 
@@ -255,7 +279,7 @@ ga('send', 'pageview');
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
         		</li>
       		
 		</ul>
@@ -311,7 +335,7 @@ ga('send', 'pageview');
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://guoliangxd.github.io/2018/11/07/datastruct-06/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://guoliangxd.github.io/2019/06/03/iptables与firewalld/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -325,18 +349,9 @@ ga('send', 'pageview');
   
 <nav id="article-nav">
   
-    <a href="/2018/11/07/datastructure-07/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          datastructure-07
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/11/06/datastruct05/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">datastruct05</div>
+    <a href="/2019/05/24/用户身份与与文件权限/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">用户身份与与文件权限</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -355,19 +370,6 @@ ga('send', 'pageview');
             </div>
         </div>
         
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#栈和队列"><span class="toc-number">1.</span> <span class="toc-text">栈和队列</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#应用案例"><span class="toc-number">1.1.</span> <span class="toc-text">应用案例</span></a></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
         
     </div>
 </aside>
@@ -389,7 +391,7 @@ ga('send', 'pageview');
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "Wed Nov 07 2018 00:13:33 GMT+0800",
+  id: "Mon Jun 03 2019 23:09:32 GMT+0800",
   owner: 'guoliangxd',
   repo: 'guoliangxd.github.io',
   oauth: {
