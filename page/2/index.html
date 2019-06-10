@@ -189,6 +189,229 @@ ga('send', 'pageview');
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-管道符、重定向与环境变量" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/09/管道符、重定向与环境变量/">管道符、重定向与环境变量</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/09/管道符、重定向与环境变量/" class="archive-article-date">
+  	<time datetime="2019-05-09T12:33:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="输入输出重定向"><a href="#输入输出重定向" class="headerlink" title="输入输出重定向"></a>输入输出重定向</h2><p><strong>简而言之，输入重定向就是把文件导入到命令中，而输出重定向则是把原本要输出到屏幕的数据信息写入到制定文件。</strong></p>
+<ul>
+<li><p>标准输入重定向（STDIN，文件描述符为0）：默认从键盘输入，也可以从其他文件或命令中输入。</p>
+</li>
+<li><p>标准输出重定向（STDOUT，文件描述符为1）：默认输出到屏幕。</p>
+</li>
+<li><p>错误输出重定向（STDERR，文件描述符为2）：默认输出到屏幕。</p>
+</li>
+</ul>
+<p>输入重定向中用到的符号及作用</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命令 &lt; 文件</td>
+<td>将文件作为命令的标准输入</td>
+</tr>
+<tr>
+<td>命令 &lt;&lt; 分界符</td>
+<td>从标准输入中读入，知道遇见分界符才停止</td>
+</tr>
+<tr>
+<td>命令 &lt;文件1&gt; 文件2</td>
+<td>将文件1作为命令的标准输入并将标准输入到文件2</td>
+</tr>
+</tbody>
+</table>
+<p>输出重定向中用到的符号及作用</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命令&gt;文件</td>
+<td>将标准输出重定向到一个文件中（将清空原文件数据</td>
+</tr>
+<tr>
+<td>命令2&gt;文件</td>
+<td>将错误输出重定向到一个文件中（将清空原文件数据)</td>
+</tr>
+<tr>
+<td>命令&gt;&gt;文件</td>
+<td>将标准输出重定向到一个文件中（将追加到原有内容的后面）</td>
+</tr>
+<tr>
+<td>命令2&gt;&gt;文件</td>
+<td>将错误输出重定向到一个文件中（将追加到原有内容的后面）</td>
+</tr>
+<tr>
+<td>命令&gt;&gt;文件2&gt;&amp;1 或 命令&amp;&gt;&gt;文件</td>
+<td>将标准输出与错误输出共同写入到文件中（追加到原有内容的后面）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="管道命令符"><a href="#管道命令符" class="headerlink" title="管道命令符"></a>管道命令符</h2><p><strong>把一个原本要输出到屏幕的数据当作是后一个命令的标准输入</strong></p>
+<h2 id="命令行的通配符"><a href="#命令行的通配符" class="headerlink" title="命令行的通配符"></a>命令行的通配符</h2><ul>
+<li><p>*：匹配零个或多个字符</p>
+</li>
+<li><p>？：匹配多个字符</p>
+</li>
+<li><p>[0-9]：匹配0到9中的一个字符</p>
+</li>
+<li><p>[abc]：匹配abc中的一个字符</p>
+</li>
+</ul>
+<h2 id="常用转义字符"><a href="#常用转义字符" class="headerlink" title="常用转义字符"></a>常用转义字符</h2><p>四个最常用转义字符</p>
+<ul>
+<li><p>反斜杠()：使反斜杠后面的一个变量变为单纯的字符串。</p>
+</li>
+<li><p>单引号(‘’)：转义其中所有的变量为单纯的字符串。</p>
+</li>
+<li><p>双引号(“”)：保留其中的变量属性，不进行转义处理。</p>
+</li>
+<li><p>反引号(<code></code>)：把其中的命令执行后返回结果。</p>
+</li>
+</ul>
+<h2 id="重要的环境变量"><a href="#重要的环境变量" class="headerlink" title="重要的环境变量"></a>重要的环境变量</h2><p><em>变量是计算机系统用于保存可变值的数据类型。</em></p>
+<p>命令在Linux中执行的四个步骤：</p>
+<ol>
+<li><p>判断用户是否以绝对路径的方式输入命令，如果是的话则直接执行。</p>
+</li>
+<li><p>Linux系统检查用户输入的命令是否为“别名命令”。</p>
+</li>
+<li><p>Bash解释器判断用户输入的是内部命令还是外部命令，内部命令由指示器直接执行。</p>
+</li>
+<li><p>系统在多个路径中查找用户输入的命令文件。</p>
+</li>
+</ol>
+<p>Linux系统中最重要的10个环境变量</p>
+<table>
+<thead>
+<tr>
+<th>变量名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HOME</td>
+<td>用户的主目录</td>
+</tr>
+<tr>
+<td>SHELL</td>
+<td>用户在使用的Shell解释器名称</td>
+</tr>
+<tr>
+<td>HISTSIZE</td>
+<td>输出的历史命令记录条数</td>
+</tr>
+<tr>
+<td>HISTFILESIZE</td>
+<td>保存的历史记录命令条数</td>
+</tr>
+<tr>
+<td>MAIL</td>
+<td>邮件保存路径</td>
+</tr>
+<tr>
+<td>LANG</td>
+<td>系统语言，语系名称</td>
+</tr>
+<tr>
+<td>RANDOM</td>
+<td>生成一个随机数字</td>
+</tr>
+<tr>
+<td>PS1</td>
+<td>Bash解释器的提示符</td>
+</tr>
+<tr>
+<td>PATH</td>
+<td>定义解释器搜索用户执行命令的路径</td>
+</tr>
+<tr>
+<td>EDITOR</td>
+<td>用户默认的文本编辑器</td>
+</tr>
+</tbody>
+</table>
+<p>创建变量 ：var=value</p>
+<p>可通过export var将声明的变量提升为全局变量。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/09/管道符、重定向与环境变量/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-常用指令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -927,82 +1150,9 @@ ga('send', 'pageview');
 
 
   
-    <article id="post-datastructure-11" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/19/datastructure-11/">datastructure-11</a>
-    </h1>
-  
-
-        
-        <a href="/2018/11/19/datastructure-11/" class="archive-article-date">
-  	<time datetime="2018-11-19T15:45:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="这篇是给KMP算法留的，必须搞定"><a href="#这篇是给KMP算法留的，必须搞定" class="headerlink" title="这篇是给KMP算法留的，必须搞定"></a>这篇是给KMP算法留的，必须搞定</h2>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/19/datastructure-11/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 
@@ -1097,11 +1247,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+                <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
               </li>
              
               <li class="article-tag-list-item">

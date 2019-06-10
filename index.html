@@ -189,6 +189,140 @@ ga('send', 'pageview');
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-网络配置与SSH" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/06/10/网络配置与SSH/">网络配置与SSH</a>
+    </h1>
+  
+
+        
+        <a href="/2019/06/10/网络配置与SSH/" class="archive-article-date">
+  	<time datetime="2019-06-10T14:21:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="配置网络服务"><a href="#配置网络服务" class="headerlink" title="配置网络服务"></a>配置网络服务</h2><ul>
+<li><p>图形化的配置工具：nmtui；</p>
+</li>
+<li><p>命令行配置工具：nmcli。</p>
+</li>
+</ul>
+<h3 id="常见的网卡绑定模式"><a href="#常见的网卡绑定模式" class="headerlink" title="常见的网卡绑定模式"></a>常见的网卡绑定模式</h3><ul>
+<li><p>mode0（平衡负载模式）：两块网卡均工作，且自动备援，但需要在与服务器本地网卡连接的交换设备上进行端口聚合来支持绑定技术。</p>
+</li>
+<li><p>mode1（自动备援模式）：只有一块网卡工作，故障后自动替换为另外的网卡。</p>
+</li>
+<li><p>mode6（平衡负载模式）：两块网卡均工作，且自动备援，无需交换设备提供辅助支持。</p>
+</li>
+</ul>
+<h2 id="远程控制服务"><a href="#远程控制服务" class="headerlink" title="远程控制服务"></a>远程控制服务</h2><p>SSH（Secure Shell）是一种能够以安全的方式提供远程登录的协议，是当前远程管理Linux系统的首选方式，此前，一般使用FTP或Telnet来进行远程登录。</p>
+<p>sshd是基于SSH协议开发的一款远程登录服务程序，提供两种安全验证方式：</p>
+<ul>
+<li><p>基于口令的验证——账户，密码验证登录；</p>
+</li>
+<li><p>基于密钥的验证——需要在本地生成密钥对，然后把密钥对中的公钥上传至服务器。</p>
+</li>
+</ul>
+<ul>
+<li>scp：基于SSH协议在网络之间进行安全传输的命令，格式：scp[para]localfile remoteaccount@remoteIP:remotedir。</li>
+</ul>
+<p>参数及作用</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-v</td>
+<td>显示详细的连接进度</td>
+</tr>
+<tr>
+<td>-P</td>
+<td>指定远程主机的sshd端口号</td>
+</tr>
+<tr>
+<td>-r</td>
+<td>用于递归的传送文件夹</td>
+</tr>
+<tr>
+<td>-6</td>
+<td>使用IPv6协议</td>
+</tr>
+</tbody>
+</table>
+<h2 id="不间断会话服务"><a href="#不间断会话服务" class="headerlink" title="不间断会话服务"></a>不间断会话服务</h2><p>screen是一款能够实现多窗口远程控制的开源服务程序，简单来说就是为了解决网络异常中断或为了同时控制多个远程终端窗口而设计的程序。能够实现以下功能：</p>
+<ul>
+<li><p>会话恢复：网络中断后也可以随时恢复；</p>
+</li>
+<li><p>多窗口：每个会话都是独立运行的；</p>
+</li>
+<li><p>会话共享：多个用户同时登录到远程服务器时，可以使用会话共享功能让用户之间的输入输出信息共享。</p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/06/10/网络配置与SSH/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-那年高考" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -675,7 +809,7 @@ ga('send', 'pageview');
 </blockquote>
 <h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><p>Markdown支持以比较简短的自动链接形式来处理网址和电子邮箱，只要是尖括号包起来的，Markdown就会自动把它转成链接。</p>
 <p><a href="http://example.com" target="_blank" rel="noopener">http://example.com</a></p>
-<p><a href="mailto:&#57;&#57;&#53;&#x34;&#52;&#x35;&#x36;&#x38;&#x30;&#64;&#x71;&#x71;&#x2e;&#99;&#x6f;&#x6d;" target="_blank" rel="noopener">&#57;&#57;&#53;&#x34;&#52;&#x35;&#x36;&#x38;&#x30;&#64;&#x71;&#x71;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+<p><a href="mailto:&#x39;&#x39;&#x35;&#52;&#52;&#x35;&#54;&#x38;&#x30;&#64;&#x71;&#113;&#x2e;&#x63;&#111;&#109;" target="_blank" rel="noopener">&#x39;&#x39;&#x35;&#52;&#52;&#x35;&#54;&#x38;&#x30;&#64;&#x71;&#113;&#x2e;&#x63;&#111;&#109;</a></p>
 
       
 
@@ -1244,232 +1378,9 @@ ga('send', 'pageview');
 
 
   
-    <article id="post-管道符、重定向与环境变量" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/09/管道符、重定向与环境变量/">管道符、重定向与环境变量</a>
-    </h1>
-  
-
-        
-        <a href="/2019/05/09/管道符、重定向与环境变量/" class="archive-article-date">
-  	<time datetime="2019-05-09T12:33:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="输入输出重定向"><a href="#输入输出重定向" class="headerlink" title="输入输出重定向"></a>输入输出重定向</h2><p><strong>简而言之，输入重定向就是把文件导入到命令中，而输出重定向则是把原本要输出到屏幕的数据信息写入到制定文件。</strong></p>
-<ul>
-<li><p>标准输入重定向（STDIN，文件描述符为0）：默认从键盘输入，也可以从其他文件或命令中输入。</p>
-</li>
-<li><p>标准输出重定向（STDOUT，文件描述符为1）：默认输出到屏幕。</p>
-</li>
-<li><p>错误输出重定向（STDERR，文件描述符为2）：默认输出到屏幕。</p>
-</li>
-</ul>
-<p>输入重定向中用到的符号及作用</p>
-<table>
-<thead>
-<tr>
-<th>符号</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>命令 &lt; 文件</td>
-<td>将文件作为命令的标准输入</td>
-</tr>
-<tr>
-<td>命令 &lt;&lt; 分界符</td>
-<td>从标准输入中读入，知道遇见分界符才停止</td>
-</tr>
-<tr>
-<td>命令 &lt;文件1&gt; 文件2</td>
-<td>将文件1作为命令的标准输入并将标准输入到文件2</td>
-</tr>
-</tbody>
-</table>
-<p>输出重定向中用到的符号及作用</p>
-<table>
-<thead>
-<tr>
-<th>符号</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>命令&gt;文件</td>
-<td>将标准输出重定向到一个文件中（将清空原文件数据</td>
-</tr>
-<tr>
-<td>命令2&gt;文件</td>
-<td>将错误输出重定向到一个文件中（将清空原文件数据)</td>
-</tr>
-<tr>
-<td>命令&gt;&gt;文件</td>
-<td>将标准输出重定向到一个文件中（将追加到原有内容的后面）</td>
-</tr>
-<tr>
-<td>命令2&gt;&gt;文件</td>
-<td>将错误输出重定向到一个文件中（将追加到原有内容的后面）</td>
-</tr>
-<tr>
-<td>命令&gt;&gt;文件2&gt;&amp;1 或 命令&amp;&gt;&gt;文件</td>
-<td>将标准输出与错误输出共同写入到文件中（追加到原有内容的后面）</td>
-</tr>
-</tbody>
-</table>
-<h2 id="管道命令符"><a href="#管道命令符" class="headerlink" title="管道命令符"></a>管道命令符</h2><p><strong>把一个原本要输出到屏幕的数据当作是后一个命令的标准输入</strong></p>
-<h2 id="命令行的通配符"><a href="#命令行的通配符" class="headerlink" title="命令行的通配符"></a>命令行的通配符</h2><ul>
-<li><p>*：匹配零个或多个字符</p>
-</li>
-<li><p>？：匹配多个字符</p>
-</li>
-<li><p>[0-9]：匹配0到9中的一个字符</p>
-</li>
-<li><p>[abc]：匹配abc中的一个字符</p>
-</li>
-</ul>
-<h2 id="常用转义字符"><a href="#常用转义字符" class="headerlink" title="常用转义字符"></a>常用转义字符</h2><p>四个最常用转义字符</p>
-<ul>
-<li><p>反斜杠()：使反斜杠后面的一个变量变为单纯的字符串。</p>
-</li>
-<li><p>单引号(‘’)：转义其中所有的变量为单纯的字符串。</p>
-</li>
-<li><p>双引号(“”)：保留其中的变量属性，不进行转义处理。</p>
-</li>
-<li><p>反引号(<code></code>)：把其中的命令执行后返回结果。</p>
-</li>
-</ul>
-<h2 id="重要的环境变量"><a href="#重要的环境变量" class="headerlink" title="重要的环境变量"></a>重要的环境变量</h2><p><em>变量是计算机系统用于保存可变值的数据类型。</em></p>
-<p>命令在Linux中执行的四个步骤：</p>
-<ol>
-<li><p>判断用户是否以绝对路径的方式输入命令，如果是的话则直接执行。</p>
-</li>
-<li><p>Linux系统检查用户输入的命令是否为“别名命令”。</p>
-</li>
-<li><p>Bash解释器判断用户输入的是内部命令还是外部命令，内部命令由指示器直接执行。</p>
-</li>
-<li><p>系统在多个路径中查找用户输入的命令文件。</p>
-</li>
-</ol>
-<p>Linux系统中最重要的10个环境变量</p>
-<table>
-<thead>
-<tr>
-<th>变量名称</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>HOME</td>
-<td>用户的主目录</td>
-</tr>
-<tr>
-<td>SHELL</td>
-<td>用户在使用的Shell解释器名称</td>
-</tr>
-<tr>
-<td>HISTSIZE</td>
-<td>输出的历史命令记录条数</td>
-</tr>
-<tr>
-<td>HISTFILESIZE</td>
-<td>保存的历史记录命令条数</td>
-</tr>
-<tr>
-<td>MAIL</td>
-<td>邮件保存路径</td>
-</tr>
-<tr>
-<td>LANG</td>
-<td>系统语言，语系名称</td>
-</tr>
-<tr>
-<td>RANDOM</td>
-<td>生成一个随机数字</td>
-</tr>
-<tr>
-<td>PS1</td>
-<td>Bash解释器的提示符</td>
-</tr>
-<tr>
-<td>PATH</td>
-<td>定义解释器搜索用户执行命令的路径</td>
-</tr>
-<tr>
-<td>EDITOR</td>
-<td>用户默认的文本编辑器</td>
-</tr>
-</tbody>
-</table>
-<p>创建变量 ：var=value</p>
-<p>可通过export var将声明的变量提升为全局变量。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/09/管道符、重定向与环境变量/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -1564,11 +1475,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+                <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
               </li>
              
               <li class="article-tag-list-item">
