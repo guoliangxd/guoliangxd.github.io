@@ -209,7 +209,7 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="数据结构-08"><a href="#数据结构-08" class="headerlink" title="数据结构-08"></a>数据结构-08</h2><h3 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h3><p>顺序实现：有头指针和尾指针，插入新元素时，队尾指针加一，删除头元素时，队头指针加一。头指针始终指向队列头元素，而尾指针始终指向队尾元素的下一个位置。<br><br>为了避免假溢出现象，可以采用循环队列（模运算）。此时要少用一个元素，当头指针等于尾指针时队列为空，（尾指针+1）%队列长度等于头指针时队列为满。队列长度为（尾指针-头指针+队列长度）%队列长度。</p>
+        <h2 id="数据结构-08"><a href="#数据结构-08" class="headerlink" title="数据结构-08"></a>数据结构-08</h2><h3 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h3><p>顺序实现：有头指针和尾指针，插入新元素时，队尾指针加一，删除头元素时，队头指针加一。头指针始终指向队列头元素，而尾指针始终指向队尾元素的下一个位置。<br><br>为了避免假溢出现象，可以采用循环队列（模运算）。此时要少用一个元素，当头指针等于尾指针时队列为空，（尾指针+1）%队列长度等于头指针时队列为满。队列长度为（尾指针-头指针+队列长度）%队列长度。</p>
 <hr>
 <p>链式实现：链队需要两个分别指向队头和队尾的指针才能唯一确定。</p>
 

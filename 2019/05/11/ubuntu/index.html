@@ -209,7 +209,7 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="在这里记录学习使用Ubuntu过程中踩过的各种坑"><a href="#在这里记录学习使用Ubuntu过程中踩过的各种坑" class="headerlink" title="在这里记录学习使用Ubuntu过程中踩过的各种坑"></a>在这里记录学习使用Ubuntu过程中踩过的各种坑</h1><h2 id="如何让Ubuntu支持exat文件系统"><a href="#如何让Ubuntu支持exat文件系统" class="headerlink" title="如何让Ubuntu支持exat文件系统"></a>如何让Ubuntu支持exat文件系统</h2><p>exfat文件系统支持4G以上的大文件，是大容量U盘最常用的格式，但Ubuntu默认是不支持exfat的，通过以下指令可以添加对exfat的支持：</p>
+        <h1 id="在这里记录学习使用Ubuntu过程中踩过的各种坑"><a href="#在这里记录学习使用Ubuntu过程中踩过的各种坑" class="headerlink" title="在这里记录学习使用Ubuntu过程中踩过的各种坑"></a>在这里记录学习使用Ubuntu过程中踩过的各种坑</h1><h2 id="如何让Ubuntu支持exat文件系统"><a href="#如何让Ubuntu支持exat文件系统" class="headerlink" title="如何让Ubuntu支持exat文件系统"></a>如何让Ubuntu支持exat文件系统</h2><p>exfat文件系统支持4G以上的大文件，是大容量U盘最常用的格式，但Ubuntu默认是不支持exfat的，通过以下指令可以添加对exfat的支持：</p>
 <pre><code>sudo apt-get install exfat-utils         
 </code></pre><h2 id="ubuntu使用su切换root用户失败"><a href="#ubuntu使用su切换root用户失败" class="headerlink" title="ubuntu使用su切换root用户失败"></a>ubuntu使用su切换root用户失败</h2><p>在密码正确的情况下出现这种情况是因为root用户没有被创建，解决方案：用passwd命令重置root密码即可。</p>
 <pre><code>su passwd root

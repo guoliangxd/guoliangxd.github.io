@@ -209,7 +209,7 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="防火墙管理工具"><a href="#防火墙管理工具" class="headerlink" title="防火墙管理工具"></a>防火墙管理工具</h2><p>iptables，firewalld并不是真正的防火墙，他们只是用来定义防火墙策略的防火墙管理工具，只是一种服务。iptable服务会把配置好的防火墙策略交由给内核层面的netfilter网络过滤器来处理。而firewalld服务则是把配置好的防火墙策略交由给内核层面的nftables包过滤框架来处理。</p>
+        <h2 id="防火墙管理工具"><a href="#防火墙管理工具" class="headerlink" title="防火墙管理工具"></a>防火墙管理工具</h2><p>iptables，firewalld并不是真正的防火墙，他们只是用来定义防火墙策略的防火墙管理工具，只是一种服务。iptable服务会把配置好的防火墙策略交由给内核层面的netfilter网络过滤器来处理。而firewalld服务则是把配置好的防火墙策略交由给内核层面的nftables包过滤框架来处理。</p>
 <h2 id="iptables"><a href="#iptables" class="headerlink" title="iptables"></a>iptables</h2><h3 id="策略与规则链"><a href="#策略与规则链" class="headerlink" title="策略与规则链"></a>策略与规则链</h3><p>防火墙会从上至下的顺序来读取配置的策略规则，在找到匹配项后就立即结束匹配工作并去执行匹配项中定义的行为。如果读完所有的策略规则后没有匹配项，就去执行默认的策略。</p>
 <p>iptables服务把用于处理或过滤流量的策略称之为规则，多条规则可以组成一个规则链，依数据包处理位置的不同可分为：</p>
 <ul>
